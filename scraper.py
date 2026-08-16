@@ -3,18 +3,12 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from io import StringIO
 import time
+import feedparser
 
 def scrape_yahoo_data(category="most-active"):
     """
     Scrapes a specific category table from Yahoo Finance.
     Categories can be: 'most-active', 'gainers', 'losers', 'crypto'
-    
-    Returns a dictionary:
-    {
-        "success": bool,
-        "data": pd.DataFrame or None,
-        "error": str or None
-    }
     """
     url = f"https://finance.yahoo.com/{category}"
     headers = {
@@ -52,3 +46,27 @@ def scrape_yahoo_data(category="most-active"):
         return {"success": False, "data": None, "error": f"Network error occurred: {str(e)}"}
     except Exception as e:
         return {"success": False, "data": None, "error": f"An unexpected error occurred while parsing: {str(e)}"}
+
+def fetch_financial_news():
+    """
+    Integrates with the Yahoo Finance RSS feed to pull top financial news.
+    Returns a list of dictionaries with 'title', 'link', and 'published' keys.
+    """
+    feed_url = "https://finance.yahoo.com/news/rssindex"
+    try:
+        feed = feedparser.parse(feed_url)
+        if not feed.entries:
+            return {"success": False, "data": None, "error": "No news articles found in the feed."}
+            
+        news_items = []
+        # Get the top 10 articles
+        for entry in feed.entries[:10]:
+            news_items.append({
+                "title": entry.get("title", "No Title"),
+                "link": entry.get("link", "#"),
+                "published": entry.get("published", "Unknown Date")
+            })
+            
+        return {"success": True, "data": news_items, "error": None}
+    except Exception as e:
+        return {"success": False, "data": None, "error": f"Failed to fetch news feed: {str(e)}"}

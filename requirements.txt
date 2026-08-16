@@ -5,3 +5,6 @@ pandas
 plotly
 lxml
 openpyxl
+scikit-learn
+numpy
+feedparser
