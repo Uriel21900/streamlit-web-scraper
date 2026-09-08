@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#031427", "primary-fixed": "#d8e2ff", "outline-variant": "#424754", "surface-tint": "#adc6ff", "on-tertiary": "#472a00", "on-surface-variant": "#c2c6d6", "surface-container-low": "#0b1c30", "error": "#ffb4ab", "on-surface": "#d3e4fe", "on-primary-fixed": "#001a42", "secondary-fixed-dim": "#4edea3", "tertiary-fixed": "#ffddb8", "tertiary-container": "#ca8100", "inverse-primary": "#005ac2", "surface-bright": "#2a3a4f", "on-primary-container": "#00285d", "surface-container-lowest": "#000f21", "on-tertiary-container": "#3e2400", "primary-fixed-dim": "#adc6ff", "outline": "#8c909f", "on-primary-fixed-variant": "#004395", "primary": "#adc6ff", "secondary-container": "#00a572", "on-primary": "#002e6a", "background": "#031427", "on-secondary": "#003824", "surface-container-high": "#1b2b3f", "on-secondary-container": "#00311f", "secondary-fixed": "#6ffbbe", "on-secondary-fixed": "#002113", "on-secondary-fixed-variant": "#005236", "surface-container-highest": "#26364a", "inverse-on-surface": "#213145", "on-background": "#d3e4fe", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#ffdad6", "inverse-surface": "#d3e4fe", "primary-container": "#4d8eff", "surface-dim": "#031427", "surface-variant": "#26364a", "secondary": "#4edea3", "tertiary": "#ffb95f", "tertiary-fixed-dim": "#ffb95f", "error-container": "#93000a", "on-error": "#690005", "surface-container": "#102034", "on-tertiary-fixed": "#2a1700" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "margin-mobile": "1rem", "margin-desktop": "1.5rem", "2xl": "2rem", "2xs": "0.125rem", "sm": "0.5rem", "3xl": "3rem", "xs": "0.25rem", "md": "0.75rem", "xl": "1.5rem", "lg": "1rem" }, "fontFamily": { "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "headline-lg": [ "Inter" ], "headline-md": [ "Inter" ], "body-sm": [ "Inter" ], "code-md": [ "JetBrains Mono" ], "headline-xl": [ "Inter" ], "code-sm": [ "JetBrains Mono" ], "headline-xl-mobile": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "label-md": [ "JetBrains Mono" ], "code-lg": [ "JetBrains Mono" ] }, "fontSize": { "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "code-md": [ "12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-xl-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "code-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30"><div class="h-14 px-lg flex items-center gap-xs border-b border-outline-variant/20"><img alt="ScrapeFlow Terminal Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WIv3jfadeVK7rGEbEXwV8auc3N6upx3Ha8YzJrQ2snFtnPG3DwcmQkha8Om_33p1O9qacJ123oZKGBtQIgQtA7GMofr7RBlOPKLkTVfcqqkFnuFr4U9pTVbtX7VCKgRqz1BSxHpUV5ahK62Hw2Eky-khG8pvJcaskXBiXKjPTdaJLauzGoKQLjyfCLwKOnchHoYfD11MU054JU5j0qB235sGQHTvPMXCWTx6K_h3xI4q9IXqo3YVy51_A"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-semibold ml-xs">ScrapeFlow</span><span class="ml-auto text-label-sm font-label-sm uppercase bg-surface-container-high text-primary px-xs py-2xs rounded">v2.4</span></div><div class="px-md py-sm"><div class="flex items-center justify-between px-xs py-2xs text-label-sm font-label-sm uppercase text-on-surface-variant/70"><span>Navigation Core</span><span class="material-symbols-outlined text-[14px]">keyboard_arrow_down</span></div></div><nav class="flex-1 px-sm space-y-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold border-l-2 border-primary"><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="extraction-studio" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Extraction Studio</span></a><a class="flex items-center justify-between px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="active-scrape-jobs-and-pipelines" href="#"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[18px]">layers</span><span>Active Scrape Jobs</span></div><span class="bg-primary/15 text-primary text-label-sm font-label-sm px-xs py-2xs rounded-full flex items-center gap-2xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>4 running</span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="data-schema-and-selector-rules" href="#"><span class="material-symbols-outlined text-[18px]">code</span><span>Schema &amp; Selectors</span></a><a class="flex items-center justify-between px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="proxies-and-anti-bot-steer" href="#"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[18px]">shield</span><span>Proxies &amp; Anti-Bot</span></div><span class="w-2 h-2 rounded-full bg-secondary" title="99.4% Pool Healthy"></span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="api-and-webhook-dispatcher" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span><span>API &amp; Webhooks</span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings-and-concurrency-limits" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings &amp; Limits</span></a></nav><div class="p-md border-t border-outline-variant/20 bg-surface-container-low/50"><div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant"><div class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>Pool Healthy</span></div><span class="text-secondary font-code-sm text-code-sm">99.4%</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full mt-xs overflow-hidden"><div class="bg-secondary h-full rounded-full" style="width: 99.4%"></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/20 z-40 px-lg flex items-center justify-between gap-md"><div class="flex items-center gap-md"><div class="flex items-center gap-xs bg-surface-container-low border border-outline-variant/30 px-sm py-2xs rounded font-code-sm text-code-sm text-on-surface cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">dns</span><span class="font-code-sm text-code-sm text-on-surface">prod-ecom-crawler-us-east</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">unfold_more</span></div><div class="flex items-center gap-xs bg-surface-container-low border border-outline-variant/30 px-md py-2xs rounded text-on-surface-variant w-72 cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1 truncate">Cmd + K to jump or run...</span><kbd class="bg-surface-container-highest px-xs py-2xs rounded font-code-sm text-[10px] text-on-surface-variant border border-outline-variant/30">⌘K</kbd></div></div><div class="flex items-center gap-md"><div class="hidden lg:flex items-center gap-xs bg-surface-container px-sm py-2xs rounded border border-outline-variant/20 font-code-sm text-code-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="text-on-surface">32/40 Workers Active</span><span class="text-outline-variant">•</span><span class="text-primary">12.4 req/s</span></div><button class="flex items-center gap-xs bg-primary-container text-on-primary-container px-md py-xs rounded font-label-md text-label-md hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">play_arrow</span><span>Run Extraction</span></button><div class="flex items-center gap-xs border-l border-outline-variant/30 pl-md"><button class="p-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-error"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8IqL6kWvrlvAWMqQNRKEI7u9615o-kOQel-edWukvpqxnxEifVdoqZzH0FprnOFAuuByLew5T2uN1ttQ2J-LsGN37BxYNOqQdmxzzGRzgV71r_G6PgE-ibLBXUmIWWixYDeU0SbLHECkYsrgNbHwrL3YGkuBDQIf8a3TsjRW4hfd1CN12IkLCX1INaHwYY6FrIHAdcja-XiisHNQkMQ-AKxV0vo91fsRY7Ql4--6fgHLDo7hJ1ezljw"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div></div></div></header><main class="relative pt-14 w-full px-margin-desktop bg-background min-h-screen"><div class="flex flex-col w-full space-y-xl pb-2xl">
+<!-- Top Command Bar / Metric Strip -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-md">
+<div class="flex flex-col gap-2xs">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Infrastructural Perimeter</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Cluster node: us-east-core-ingress</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Proxies &amp; Anti-Bot Steering</h1>
+</div>
+<!-- Quick Actions & Auth Export -->
+<div class="flex flex-wrap items-center gap-xs">
+<button class="flex items-center gap-xs bg-surface-container-high hover:bg-surface-bright text-on-surface px-md py-xs rounded font-label-md text-label-md shadow-sm transition-all active:scale-95" id="rotatePoolBtn" onclick="rotatePoolTrigger()" type="button">
+<span class="material-symbols-outlined text-secondary text-[16px] animate-spin" id="rotateIcon" style="animation-play-state: paused;">sync</span>
+<span>Rotate Entire Pool</span>
+<kbd class="bg-surface-container-lowest px-xs py-2xs rounded font-code-sm text-code-sm text-on-surface-variant ml-xs">⌘R</kbd>
+</button>
+<button class="flex items-center gap-xs bg-surface-container-high hover:bg-surface-bright text-on-surface px-md py-xs rounded font-label-md text-label-md shadow-sm transition-all" onclick="toggleAuthModal()" type="button">
+<span class="material-symbols-outlined text-primary text-[16px]">key</span>
+<span>Credentials &amp; cURL</span>
+</button>
+<div class="flex items-center gap-2xs bg-surface-container px-sm py-xs rounded">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">99.82% Passed</span>
+</div>
+</div>
+</div>
+<!-- Pool Health & Distribution Grid (Section 1) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-md">
+<!-- Card 1: Residential Rotating -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Residential Rotating</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">84,200</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">home</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Healthy Clean IPs</span>
+<span class="text-secondary font-medium">99.8% Uptime</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 99.8%"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">ASN diversity: 1,480 Tier-1 ISPs</span>
+</div>
+</div>
+<!-- Card 2: Mobile 4G/5G Gateways -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Mobile 4G/5G Nodes</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">12,500</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Carriers active</span>
+<span class="text-primary font-medium">AT&amp;T · VZW · Voda</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88.4%"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Dynamic CGNAT rotation &lt; 400ms</span>
+</div>
+</div>
+<!-- Card 3: Datacenter Dedicated -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Datacenter Unmetered</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">1,200</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Bandwidth</span>
+<span class="text-tertiary font-medium">10 Gbps unmetered</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Zero-hop fast synthetic bypass</span>
+</div>
+</div>
+<!-- Card 4: Cooldown / Auto-Banned -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Auto-Banned / Cooldown</span>
+<span class="font-headline-lg text-headline-lg text-error font-semibold">142</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">hourglass_empty</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Re-quarantine window</span>
+<span class="text-error font-medium">~18m avg decay</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 14%"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">0.14% of global IP allocation</span>
+</div>
+</div>
+</div>
+<!-- Regional Latency Map & Global Mesh (Section 1 continued) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-md">
+<!-- Visual Geographic Latency Hub -->
+<div class="lg:col-span-2 bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">public</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Global Gateway Latency Topology</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-highest px-xs py-2xs rounded">ICMP/TLS handshakes</span>
+</div>
+<!-- World Visual Grid / Node Map SVG Overlay -->
+<div class="relative w-full h-56 bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-md">
+<!-- Abstract Vector Grid Wireframe -->
+<svg class="w-full h-full opacity-35 text-outline-variant" fill="none" viewbox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="gridPattern" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-opacity="0.3" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#gridPattern)" height="320" width="800"></rect>
+<!-- Flight / Routing lines -->
+<path class="text-primary opacity-60" d="M 210 110 Q 360 40 430 115" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path class="text-primary opacity-60" d="M 430 115 Q 560 70 690 130" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path class="text-secondary opacity-60" d="M 210 110 Q 250 200 290 240" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+</svg>
+<!-- US-East Ping Pin -->
+<div class="absolute left-[26%] top-[34%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="flex items-center gap-xs bg-surface-container-high px-xs py-2xs rounded shadow-md group-hover:bg-surface-bright transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">US-East</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold">38ms</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-primary mt-1 shadow-lg shadow-primary/50 animate-pulse"></div>
+</div>
+<!-- EU-Frankfurt Ping Pin -->
+<div class="absolute left-[54%] top-[36%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="flex items-center gap-xs bg-surface-container-high px-xs py-2xs rounded shadow-md group-hover:bg-surface-bright transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">EU-Frankfurt</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold">44ms</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-secondary mt-1 animate-pulse"></div>
+</div>
+<!-- AP-Tokyo Ping Pin -->
+<div class="absolute left-[86%] top-[40%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="flex items-center gap-xs bg-surface-container-high px-xs py-2xs rounded shadow-md group-hover:bg-surface-bright transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">AP-Tokyo</span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">112ms</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-tertiary mt-1"></div>
+</div>
+<!-- BR-SaoPaulo Ping Pin -->
+<div class="absolute left-[36%] top-[75%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="flex items-center gap-xs bg-surface-container-high px-xs py-2xs rounded shadow-md group-hover:bg-surface-bright transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">BR-SaoPaulo</span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">148ms</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-tertiary mt-1"></div>
+</div>
+</div>
+<!-- Quick Region Latency Breakdown footer -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-sm mt-md">
+<div class="bg-surface-container-highest/40 p-sm rounded flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">North America</span>
+<span class="font-code-md text-code-md text-secondary font-semibold">38ms · 99.9% clean</span>
+</div>
+<div class="bg-surface-container-highest/40 p-sm rounded flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Europe Central</span>
+<span class="font-code-md text-code-md text-secondary font-semibold">44ms · 99.7% clean</span>
+</div>
+<div class="bg-surface-container-highest/40 p-sm rounded flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Asia Pacific</span>
+<span class="font-code-md text-code-md text-tertiary font-semibold">112ms · 99.2% clean</span>
+</div>
+<div class="bg-surface-container-highest/40 p-sm rounded flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Latin America</span>
+<span class="font-code-md text-code-md text-tertiary font-semibold">148ms · 98.9% clean</span>
+</div>
+</div>
+</div>
+<!-- Proxy Provider Mix & Health Score -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-md">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Egress Health &amp; Mix</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase bg-secondary/15 px-xs py-2xs rounded">Optimized</span>
+</div>
+<!-- Mini visual radial / breakdown -->
+<div class="flex items-center gap-md my-auto">
+<div class="relative w-28 h-28 flex items-center justify-center shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="72, 100" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="22, 100" stroke-dashoffset="-72" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">99.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Pass</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs flex-1">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="flex items-center gap-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-primary"></span>Oxylabs Resi</span>
+<span class="text-on-surface font-semibold">68%</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="flex items-center gap-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary"></span>BrightData 4G</span>
+<span class="text-on-surface font-semibold">22%</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="flex items-center gap-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-tertiary"></span>AWS Direct DC</span>
+<span class="text-on-surface font-semibold">10%</span>
+</div>
+</div>
+</div>
+<div class="mt-md pt-sm bg-surface-container p-sm rounded flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Captcha Solver Balance</span>
+<span class="font-code-lg text-code-lg text-tertiary font-bold">$142.50 USD</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-sm py-xs rounded font-label-md text-label-md transition-colors" type="button">
+          Add Funds
+        </button>
+</div>
+</div>
+</div>
+<!-- Section 2: Anti-Bot Bypass Configuration Matrix -->
+<div class="flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">fingerprint</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Anti-Bot Bypass Configuration Matrix</h2>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Auto-Adaptive Heuristics: Active</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-md">
+<!-- Rule 1: Cloudflare Turnstile & Challenge Solver -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Cloudflare Turnstile</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Intercepts Turnstile JS challenges and interstitial managed loops before headless canvas instantiation.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Auto-Solve Rate:</span>
+<span class="text-secondary font-semibold">99.4%</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Avg Solve Duration:</span>
+<span class="text-on-surface font-mono">1.2s</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Fallback Tier:</span>
+<span class="text-primary font-mono">Mobile IP Escalation</span>
+</div>
+</div>
+</div>
+<!-- Rule 2: Akamai & Datadome TLS Camouflage -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">shuffle</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">JA3/JA4 TLS Camouflage</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Injects randomized cipher suites, dynamic HTTP/2 PRIORITY frames, and pseudorandom SNI extensions for Akamai &amp; Datadome.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Active Fingerprint:</span>
+<span class="text-secondary font-semibold font-mono">Chrome 122 (OSX)</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">HTTP/2 SETTINGS Frame:</span>
+<span class="text-on-surface font-mono">Randomized (1-100)</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">GREASE Extension:</span>
+<span class="text-secondary font-mono">Synthesized (0x?a?a)</span>
+</div>
+</div>
+</div>
+<!-- Rule 3: Headless Browser Fingerprint Generator -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">visibility_off</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Canvas &amp; Audio Noise</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Injects imperceptible float shifts into WebGL render buffers and AudioContext oscillation to prevent persistent cross-session tracking.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">WebGL Vendor:</span>
+<span class="text-on-surface font-mono">Apple M2 GPU spoof</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Canvas Hash Jitter:</span>
+<span class="text-secondary font-mono">±0.00004px drift</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">navigator.webdriver:</span>
+<span class="text-secondary font-mono">undefined (patched)</span>
+</div>
+</div>
+</div>
+<!-- Rule 4: Automated Captcha Solvers (reCAPTCHA / hCaptcha) -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Captcha Automation</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            High-throughput API dispatcher for solving invisible reCAPTCHA v3 (target score 0.9+) and Enterprise hCaptcha puzzles.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Unit Cost:</span>
+<span class="text-on-surface font-mono">$0.001 / solve</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">v3 Human Score:</span>
+<span class="text-secondary font-mono">0.93 verified</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Timeout threshold:</span>
+<span class="text-on-surface font-mono">15,000ms max</span>
+</div>
+</div>
+</div>
+<!-- Rule 5: Exponential Backoff & Smart Jitter -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">timer</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Smart Retry &amp; Jitter</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Prevents IP block cascade via randomized intervals, exponential backoff, and instant switch from DC to Residential on 403.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Jitter Range:</span>
+<span class="text-on-surface font-mono">1.5s – 4.2s (Gaussian)</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Max Auto-Retries:</span>
+<span class="text-secondary font-mono">5 attempts</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">On 429 Ratelimit:</span>
+<span class="text-primary font-mono">Rotate IP + 8s pause</span>
+</div>
+</div>
+</div>
+<!-- Rule 6: Header & Cookie Integrity Vault -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">cookie</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Cookie &amp; Session Vault</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Caches target session cookies and warm headers (`sec-ch-ua-platform`, `sec-fetch-dest`) across recurring spider threads.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Warmed Sessions:</span>
+<span class="text-secondary font-semibold font-mono">3,490 active</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Cookie Pool Invalidation:</span>
+<span class="text-on-surface font-mono">On 401/403 auto-drop</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Header Order Camouflage:</span>
+<span class="text-secondary font-mono">Strict RFC compliant</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Live Traffic Inspector & IP Request Stream -->
+<div class="bg-surface-container-low rounded-xl shadow-sm p-lg flex flex-col space-y-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-sm">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Live Egress Request Stream</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant ml-xs">Streaming 14.8 req/s</span>
+</div>
+<!-- Stream Filters & Controls -->
+<div class="flex items-center gap-xs">
+<div class="flex items-center gap-xs bg-surface-container px-sm py-2xs rounded">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">filter_list</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Filter: All Statuses</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface bg-surface-container-high hover:bg-surface-bright px-xs py-2xs rounded font-code-sm text-code-sm transition-colors" onclick="clearLiveFeed()" type="button">
+          Clear Buffer
+        </button>
+</div>
+</div>
+<!-- Telemetry Table -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left font-code-sm text-code-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-on-surface-variant uppercase text-label-sm font-label-sm">
+<th class="py-sm px-md">Timestamp</th>
+<th class="py-sm px-md">Egress IP Masked</th>
+<th class="py-sm px-md">Type / Region</th>
+<th class="py-sm px-md">Protocol</th>
+<th class="py-sm px-md">Target Domain</th>
+<th class="py-sm px-md">Latency</th>
+<th class="py-sm px-md">Fingerprint</th>
+<th class="py-sm px-md text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface" id="streamTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:01.884</td>
+<td class="py-xs px-md font-mono text-primary font-medium">198.51.***.42</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary">home</span> US-East (Resi)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+<td class="py-xs px-md font-mono text-on-surface">api.marketplace-vendor.com</td>
+<td class="py-xs px-md text-secondary font-mono">42ms</td>
+<td class="py-xs px-md text-on-surface-variant">Chrome 122 / JA4-b3</td>
+<td class="py-xs px-md text-right">
+<span class="bg-secondary/15 text-secondary font-label-sm text-label-sm px-xs py-2xs rounded">200 OK</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:01.720</td>
+<td class="py-xs px-md font-mono text-primary font-medium">142.250.***.19</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-primary">signal_cellular_alt</span> EU-Frankfurt (4G)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+<td class="py-xs px-md font-mono text-on-surface">cdn.retail-catalog.eu/sku</td>
+<td class="py-xs px-md text-secondary font-mono">58ms</td>
+<td class="py-xs px-md text-on-surface-variant">Safari 17.2 / iOS</td>
+<td class="py-xs px-md text-right">
+<span class="bg-secondary/15 text-secondary font-label-sm text-label-sm px-xs py-2xs rounded">200 OK</span>
+</td>
+</tr>
+<!-- Row 3: Retried 403 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:01.512</td>
+<td class="py-xs px-md font-mono text-tertiary font-medium">104.28.***.93</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary">dns</span> AP-Tokyo (DC)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/1.1</td>
+<td class="py-xs px-md font-mono text-on-surface">secure.ecom-gateway.jp/p</td>
+<td class="py-xs px-md text-tertiary font-mono">118ms</td>
+<td class="py-xs px-md text-on-surface-variant">Automated Turnstile</td>
+<td class="py-xs px-md text-right">
+<span class="bg-tertiary/15 text-tertiary font-label-sm text-label-sm px-xs py-2xs rounded">403 Retried (Resi)</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:01.290</td>
+<td class="py-xs px-md font-mono text-primary font-medium">185.190.***.11</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary">home</span> US-Central (Resi)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+<td class="py-xs px-md font-mono text-on-surface">cloud.target-pricing-engine.com</td>
+<td class="py-xs px-md text-secondary font-mono">31ms</td>
+<td class="py-xs px-md text-on-surface-variant">Firefox 123 / Win11</td>
+<td class="py-xs px-md text-right">
+<span class="bg-secondary/15 text-secondary font-label-sm text-label-sm px-xs py-2xs rounded">200 OK</span>
+</td>
+</tr>
+<!-- Row 5: 302 Found -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:00.990</td>
+<td class="py-xs px-md font-mono text-primary font-medium">177.18.***.67</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary">home</span> BR-SaoPaulo (Resi)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+<td class="py-xs px-md font-mono text-on-surface">auth.latam-goods.com.br/s</td>
+<td class="py-xs px-md text-primary font-mono">146ms</td>
+<td class="py-xs px-md text-on-surface-variant">Chrome 122 / Android</td>
+<td class="py-xs px-md text-right">
+<span class="bg-primary/15 text-primary font-label-sm text-label-sm px-xs py-2xs rounded">302 Redirect</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Modal Backdrop for Auth Credentials & cURL Export (Hidden by default) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-md" id="authCredentialsModal">
+<div class="bg-surface-container-low rounded-xl shadow-xl max-w-xl w-full p-lg flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">vpn_key</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Proxy Authentication &amp; Snippets</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-xs rounded hover:bg-surface-container-high" onclick="toggleAuthModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Direct Residential Ingress Gateway</span>
+<div class="flex items-center justify-between bg-surface-container-lowest p-sm rounded font-code-sm text-code-sm text-on-surface">
+<span class="truncate">http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777</span>
+<button class="text-primary hover:text-primary-fixed ml-sm" onclick="copySnippet('http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777')" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- cURL / Python Segmented View -->
+<div class="flex flex-col gap-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">cURL Execution Example</span>
+<pre class="bg-surface-container-lowest p-md rounded font-code-sm text-code-sm text-primary overflow-x-auto"><code>curl -x http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777 \
+  -H "X-ScrapeFlow-AntiBot: cloudflare-turnstile=auto;ja4=rotate" \
+  https://target-endpoint.com/v1/inventory</code></pre>
+</div>
+<div class="flex items-center justify-between pt-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rotating credentials refresh every 24 hours automatically.</span>
+<button class="bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md px-md py-xs rounded transition-colors" onclick="toggleAuthModal()" type="button">
+          Done
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleAuthModal() {
+    const modal = document.getElementById('authCredentialsModal');
+    if (modal.classList.contains('hidden')) {
+      modal.classList.remove('hidden');
+    } else {
+      modal.classList.add('hidden');
+    }
+  }
+
+  function rotatePoolTrigger() {
+    const icon = document.getElementById('rotateIcon');
+    const btn = document.getElementById('rotatePoolBtn');
+    icon.style.animationPlayState = 'running';
+    btn.classList.add('opacity-75');
+
+    setTimeout(() => {
+      icon.style.animationPlayState = 'paused';
+      btn.classList.remove('opacity-75');
+      // Visual feedback
+      const newRow = document.createElement('tr');
+      newRow.className = 'hover:bg-surface-container transition-colors bg-surface-container-highest/20';
+      newRow.innerHTML = `
+        <td class="py-xs px-md text-on-surface-variant">Just now</td>
+        <td class="py-xs px-md font-mono text-secondary font-medium">109.124.***.88</td>
+        <td class="py-xs px-md"><span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm"><span class="material-symbols-outlined text-[12px] text-secondary">home</span> Global Fresh Pool</span></td>
+        <td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+        <td class="py-xs px-md font-mono text-secondary">Rotated 84,200 egress routes</td>
+        <td class="py-xs px-md text-secondary font-mono">18ms</td>
+        <td class="py-xs px-md text-on-surface-variant">Zero-leaked JA4</td>
+        <td class="py-xs px-md text-right"><span class="bg-secondary/15 text-secondary font-label-sm text-label-sm px-xs py-2xs rounded">POOL FLUSHED</span></td>
+      `;
+      const tbody = document.getElementById('streamTableBody');
+      tbody.insertBefore(newRow, tbody.firstChild);
+    }, 900);
+  }
+
+  function clearLiveFeed() {
+    const tbody = document.getElementById('streamTableBody');
+    tbody.innerHTML = `
+      <tr class="bg-surface-container-low">
+        <td colspan="8" class="py-md px-md text-center text-on-surface-variant font-code-sm text-code-sm">
+          Buffer cleared. Listening for next outbound egress worker thread...
+        </td>
+      </tr>
+    `;
+  }
+
+  function copySnippet(text) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+    }
+  }
+
+  // Keyboard shortcut listener for Cmd+R
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'r') {
+      e.preventDefault();
+      rotatePoolTrigger();
+    }
+  });
+</script></main></div></body></html>

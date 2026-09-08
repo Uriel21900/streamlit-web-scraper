@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#031427", "primary-fixed": "#d8e2ff", "outline-variant": "#424754", "surface-tint": "#adc6ff", "on-tertiary": "#472a00", "on-surface-variant": "#c2c6d6", "surface-container-low": "#0b1c30", "error": "#ffb4ab", "on-surface": "#d3e4fe", "on-primary-fixed": "#001a42", "secondary-fixed-dim": "#4edea3", "tertiary-fixed": "#ffddb8", "tertiary-container": "#ca8100", "inverse-primary": "#005ac2", "surface-bright": "#2a3a4f", "on-primary-container": "#00285d", "surface-container-lowest": "#000f21", "on-tertiary-container": "#3e2400", "primary-fixed-dim": "#adc6ff", "outline": "#8c909f", "on-primary-fixed-variant": "#004395", "primary": "#adc6ff", "secondary-container": "#00a572", "on-primary": "#002e6a", "background": "#031427", "on-secondary": "#003824", "surface-container-high": "#1b2b3f", "on-secondary-container": "#00311f", "secondary-fixed": "#6ffbbe", "on-secondary-fixed": "#002113", "on-secondary-fixed-variant": "#005236", "surface-container-highest": "#26364a", "inverse-on-surface": "#213145", "on-background": "#d3e4fe", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#ffdad6", "inverse-surface": "#d3e4fe", "primary-container": "#4d8eff", "surface-dim": "#031427", "surface-variant": "#26364a", "secondary": "#4edea3", "tertiary": "#ffb95f", "tertiary-fixed-dim": "#ffb95f", "error-container": "#93000a", "on-error": "#690005", "surface-container": "#102034", "on-tertiary-fixed": "#2a1700" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "margin-mobile": "1rem", "margin-desktop": "1.5rem", "2xl": "2rem", "2xs": "0.125rem", "sm": "0.5rem", "3xl": "3rem", "xs": "0.25rem", "md": "0.75rem", "xl": "1.5rem", "lg": "1rem" }, "fontFamily": { "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "headline-lg": [ "Inter" ], "headline-md": [ "Inter" ], "body-sm": [ "Inter" ], "code-md": [ "JetBrains Mono" ], "headline-xl": [ "Inter" ], "code-sm": [ "JetBrains Mono" ], "headline-xl-mobile": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "label-md": [ "JetBrains Mono" ], "code-lg": [ "JetBrains Mono" ] }, "fontSize": { "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "code-md": [ "12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-xl-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "code-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30"><div class="h-14 px-lg flex items-center gap-xs border-b border-outline-variant/20"><img alt="ScrapeFlow Terminal Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WIv3jfadeVK7rGEbEXwV8auc3N6upx3Ha8YzJrQ2snFtnPG3DwcmQkha8Om_33p1O9qacJ123oZKGBtQIgQtA7GMofr7RBlOPKLkTVfcqqkFnuFr4U9pTVbtX7VCKgRqz1BSxHpUV5ahK62Hw2Eky-khG8pvJcaskXBiXKjPTdaJLauzGoKQLjyfCLwKOnchHoYfD11MU054JU5j0qB235sGQHTvPMXCWTx6K_h3xI4q9IXqo3YVy51_A"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-semibold ml-xs">ScrapeFlow</span><span class="ml-auto text-label-sm font-label-sm uppercase bg-surface-container-high text-primary px-xs py-2xs rounded">v2.4</span></div><div class="px-md py-sm"><div class="flex items-center justify-between px-xs py-2xs text-label-sm font-label-sm uppercase text-on-surface-variant/70"><span>Navigation Core</span><span class="material-symbols-outlined text-[14px]">keyboard_arrow_down</span></div></div><nav class="flex-1 px-sm space-y-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold border-l-2 border-primary"><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="extraction-studio" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Extraction Studio</span></a><a class="flex items-center justify-between px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="active-scrape-jobs-and-pipelines" href="#"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[18px]">layers</span><span>Active Scrape Jobs</span></div><span class="bg-primary/15 text-primary text-label-sm font-label-sm px-xs py-2xs rounded-full flex items-center gap-2xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>4 running</span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="data-schema-and-selector-rules" href="#"><span class="material-symbols-outlined text-[18px]">code</span><span>Schema &amp; Selectors</span></a><a class="flex items-center justify-between px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="proxies-and-anti-bot-steer" href="#"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[18px]">shield</span><span>Proxies &amp; Anti-Bot</span></div><span class="w-2 h-2 rounded-full bg-secondary" title="99.4% Pool Healthy"></span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="api-and-webhook-dispatcher" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span><span>API &amp; Webhooks</span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings-and-concurrency-limits" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings &amp; Limits</span></a></nav><div class="p-md border-t border-outline-variant/20 bg-surface-container-low/50"><div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant"><div class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>Pool Healthy</span></div><span class="text-secondary font-code-sm text-code-sm">99.4%</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full mt-xs overflow-hidden"><div class="bg-secondary h-full rounded-full" style="width: 99.4%"></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/20 z-40 px-lg flex items-center justify-between gap-md"><div class="flex items-center gap-md"><div class="flex items-center gap-xs bg-surface-container-low border border-outline-variant/30 px-sm py-2xs rounded font-code-sm text-code-sm text-on-surface cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">dns</span><span class="font-code-sm text-code-sm text-on-surface">prod-ecom-crawler-us-east</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">unfold_more</span></div><div class="flex items-center gap-xs bg-surface-container-low border border-outline-variant/30 px-md py-2xs rounded text-on-surface-variant w-72 cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1 truncate">Cmd + K to jump or run...</span><kbd class="bg-surface-container-highest px-xs py-2xs rounded font-code-sm text-[10px] text-on-surface-variant border border-outline-variant/30">⌘K</kbd></div></div><div class="flex items-center gap-md"><div class="hidden lg:flex items-center gap-xs bg-surface-container px-sm py-2xs rounded border border-outline-variant/20 font-code-sm text-code-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="text-on-surface">32/40 Workers Active</span><span class="text-outline-variant">•</span><span class="text-primary">12.4 req/s</span></div><button class="flex items-center gap-xs bg-primary-container text-on-primary-container px-md py-xs rounded font-label-md text-label-md hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">play_arrow</span><span>Run Extraction</span></button><div class="flex items-center gap-xs border-l border-outline-variant/30 pl-md"><button class="p-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-error"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8IqL6kWvrlvAWMqQNRKEI7u9615o-kOQel-edWukvpqxnxEifVdoqZzH0FprnOFAuuByLew5T2uN1ttQ2J-LsGN37BxYNOqQdmxzzGRzgV71r_G6PgE-ibLBXUmIWWixYDeU0SbLHECkYsrgNbHwrL3YGkuBDQIf8a3TsjRW4hfd1CN12IkLCX1INaHwYY6FrIHAdcja-XiisHNQkMQ-AKxV0vo91fsRY7Ql4--6fgHLDo7hJ1ezljw"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div></div></div></header><main class="relative pt-14 w-full px-margin-desktop bg-background min-h-screen"><div class="flex flex-col w-full pb-3xl space-y-lg">
+<!-- Top Context Header / Schema Meta Banner -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-md bg-surface-container-low p-md rounded-lg shadow-sm">
+<div class="flex items-center gap-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-xs">
+<span class="font-headline-md text-headline-md text-on-surface truncate">e-commerce-product-catalog.v3</span>
+<span class="bg-secondary/10 text-secondary text-label-sm font-label-sm px-xs py-2xs rounded-full flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            ACTIVE PRODUCTION
+          </span>
+<span class="bg-surface-container-highest text-on-surface-variant text-label-sm font-label-sm px-xs py-2xs rounded">rev-884c</span>
+</div>
+<div class="flex items-center gap-md text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span>Target: <span class="font-code-sm text-code-sm text-primary">*.shopify.com / pdp-v2</span></span>
+<span>•</span>
+<span>12 Rules Defined</span>
+<span>•</span>
+<span>Success Rate: <span class="font-code-sm text-code-sm text-secondary">99.82%</span></span>
+<span>•</span>
+<span>Last modified: 14m ago by <span class="text-on-surface">alex.dev</span></span>
+</div>
+</div>
+</div>
+<!-- Quick Schema Actions -->
+<div class="flex items-center gap-xs flex-wrap">
+<button class="flex items-center gap-xs px-sm py-xs bg-surface-container-high text-on-surface hover:bg-surface-bright rounded text-label-md font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">difference</span>
+<span>Diff Revisions</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs bg-surface-container-high text-on-surface hover:bg-surface-bright rounded text-label-md font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">upload_file</span>
+<span>Import OpenAPI/JSON</span>
+</button>
+<div class="relative group">
+<button class="flex items-center gap-xs px-sm py-xs bg-surface-container-highest text-primary-fixed hover:bg-surface-bright rounded text-label-md font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">ios_share</span>
+<span>Export Scrapy / Playwright</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<button class="flex items-center gap-xs px-md py-xs bg-primary-container text-on-primary-container hover:bg-primary rounded text-label-md font-label-md transition-colors shadow-sm font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Publish Pipeline</span>
+</button>
+</div>
+</div>
+<!-- Main Grid: 3-column Architecture (Directory, Builder/Pipeline, Sandbox & Code Export) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-lg items-start">
+<!-- LEFT PANEL: Schema Directory & Collections (Col 1-3) -->
+<div class="xl:col-span-3 flex flex-col space-y-md">
+<!-- Directory Card -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+<span>Schema Directory</span>
+</div>
+<button class="p-2xs text-primary hover:bg-surface-container rounded transition-colors" title="Create New Schema" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</button>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-sm py-xs pl-xl rounded focus:outline-none placeholder-outline" placeholder="Filter schemas, tags..." type="text"/>
+<span class="material-symbols-outlined absolute left-2xs top-1/2 -translate-y-1/2 text-[16px] text-on-surface-variant">search</span>
+</div>
+<!-- Schema Listing Tree -->
+<div class="space-y-xs pt-xs">
+<!-- Active Item -->
+<div class="p-sm rounded bg-surface-container-high shadow-sm cursor-pointer transition-colors">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-primary font-semibold truncate">e-commerce-product-catalog.v3</span>
+<span class="w-2 h-2 rounded-full bg-secondary mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">12 fields • shopify</span>
+<span class="text-label-sm font-label-sm text-secondary">Prod</span>
+</div>
+</div>
+<!-- Inactive Item -->
+<div class="p-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-on-surface truncate">job-board-postings.v2</span>
+<span class="w-2 h-2 rounded-full bg-secondary mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">18 fields • lever/greenhouse</span>
+<span class="text-label-sm font-label-sm text-secondary">Prod</span>
+</div>
+</div>
+<!-- Inactive Item -->
+<div class="p-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-on-surface truncate">real-estate-mls-listings.v1</span>
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">34 fields • mls-idx</span>
+<span class="text-label-sm font-label-sm text-tertiary">Staging</span>
+</div>
+</div>
+<!-- Inactive Item -->
+<div class="p-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-on-surface truncate">sec-edgar-financial-filings.v4</span>
+<span class="w-2 h-2 rounded-full bg-secondary mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">29 fields • 10-K/10-Q</span>
+<span class="text-label-sm font-label-sm text-secondary">Prod</span>
+</div>
+</div>
+<!-- Inactive Item -->
+<div class="p-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-on-surface truncate">social-profile-metrics.v1</span>
+<span class="w-2 h-2 rounded-full bg-error mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">9 fields • instagram/tiktok</span>
+<span class="text-label-sm font-label-sm text-error">Degraded</span>
+</div>
+</div>
+</div>
+<div class="pt-sm">
+<button class="w-full flex items-center justify-center gap-xs py-xs bg-surface-container-highest hover:bg-surface-bright text-on-surface text-label-md font-label-md rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>New Schema Definition</span>
+</button>
+</div>
+</div>
+<!-- Quick Metrics / Rule Quality Bento Card -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Schema Health Radar</span>
+<div class="flex items-center justify-between pt-2xs">
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg text-secondary">99.8%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DOM Selector Resilience</span>
+</div>
+<!-- Inline Sparkline / Mini Donut SVG -->
+<div class="w-12 h-12 relative flex items-center justify-center">
+<svg class="w-12 h-12 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="99.8, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="material-symbols-outlined text-[16px] text-secondary absolute">verified</span>
+</div>
+</div>
+<div class="space-y-xs font-code-sm text-code-sm pt-xs">
+<div class="flex justify-between text-on-surface-variant">
+<span>Primary CSS Matches:</span>
+<span class="text-on-surface">94.1%</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Fallback XPath Triggered:</span>
+<span class="text-tertiary">5.7%</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>LLM Heuristic Recovered:</span>
+<span class="text-primary">0.2%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER PANEL: Interactive Schema Builder & Rules (Col 4-8) -->
+<div class="xl:col-span-5 flex flex-col space-y-md">
+<!-- Editor Mode Tabs -->
+<div class="bg-surface-container-low rounded-lg p-xs flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-xs">
+<button class="flex items-center gap-xs px-md py-xs rounded bg-surface-container-high text-primary font-label-md text-label-md transition-colors" id="tab-visual" onclick="switchView('visual')" type="button">
+<span class="material-symbols-outlined text-[16px]">view_kanban</span>
+<span>Rule Builder</span>
+</button>
+<button class="flex items-center gap-xs px-md py-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" id="tab-code" onclick="switchView('code')" type="button">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>YAML / JSON Spec</span>
+</button>
+</div>
+<div class="flex items-center gap-xs pr-xs">
+<button class="p-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Auto-format" type="button">
+<span class="material-symbols-outlined text-[16px]">magic_button</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Validate Schema" type="button">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</button>
+</div>
+</div>
+<!-- VIEW 1: Visual Rule Builder Container -->
+<div class="space-y-sm" id="visual-builder-panel">
+<!-- Field 1: SKU -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">tag</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">sku</span>
+<span class="bg-primary/10 text-primary text-label-sm font-label-sm px-xs py-2xs rounded">string</span>
+<span class="bg-error/15 text-error text-label-sm font-label-sm px-xs py-2xs rounded">required</span>
+</div>
+<div class="flex items-center gap-2xs">
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" title="Test rule" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+<button class="p-2xs text-on-surface-variant hover:text-on-surface rounded" type="button"><span class="material-symbols-outlined text-[16px]">drag_handle</span></button>
+</div>
+</div>
+<!-- Selector inputs & Pipe chain -->
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">[data-product-id]</code>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">XPath Fallback</span>
+<code class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-xs py-2xs rounded flex-1 select-all">//div[contains(@class,'sku')]</code>
+</div>
+</div>
+<!-- Transform Pipe -->
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>trim()</span>
+<span class="material-symbols-outlined text-[12px] text-on-surface-variant">chevron_right</span>
+</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>regex_extract('^SKU-([0-9]+)')</span>
+</span>
+<button class="text-primary hover:text-primary-fixed text-label-sm font-label-sm flex items-center gap-2xs ml-xs" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> add pipe
+            </button>
+</div>
+</div>
+<!-- Field 2: current_price -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">attach_money</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">current_price</span>
+<span class="bg-tertiary/10 text-tertiary text-label-sm font-label-sm px-xs py-2xs rounded">float</span>
+<span class="bg-error/15 text-error text-label-sm font-label-sm px-xs py-2xs rounded">required</span>
+</div>
+<div class="flex items-center gap-2xs">
+<span class="text-label-sm font-label-sm text-secondary bg-secondary/10 px-xs py-2xs rounded">Validations (2)</span>
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+</div>
+</div>
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">span.price-current, .pdp-price</code>
+</div>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>remove_currency_symbols()</span>
+<span class="material-symbols-outlined text-[12px] text-on-surface-variant">chevron_right</span>
+</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>to_float()</span>
+</span>
+</div>
+<!-- Validation Rules Box -->
+<div class="bg-surface-container-highest/60 rounded p-xs flex items-center gap-sm text-code-sm font-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">shield_with_heart</span>
+<span>Rules: <code class="text-tertiary">min: 0.01</code>, <code class="text-error">alert_if_null: true</code>, <code class="text-on-surface">max_drop_pct: 75%</code></span>
+</div>
+</div>
+<!-- Field 3: inventory_count -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">inventory_2</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">inventory_count</span>
+<span class="bg-secondary/10 text-secondary text-label-sm font-label-sm px-xs py-2xs rounded">integer</span>
+<span class="bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-xs py-2xs rounded">nullable</span>
+</div>
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+</div>
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">span.stock-qty, [data-stock]</code>
+</div>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>parse_int(fallback=0)</span>
+</span>
+</div>
+</div>
+<!-- Field 4: variant_colors (Array) -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">palette</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">variant_colors</span>
+<span class="bg-primary/10 text-primary text-label-sm font-label-sm px-xs py-2xs rounded">array&lt;string&gt;</span>
+</div>
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+</div>
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">.swatch-list li::attr(data-color)</code>
+</div>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded">to_array()</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded">dedup()</span>
+</div>
+</div>
+<!-- Field 5: breadcrumbs -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">alt_route</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">breadcrumbs</span>
+<span class="bg-primary/10 text-primary text-label-sm font-label-sm px-xs py-2xs rounded">string</span>
+</div>
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+</div>
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">nav.breadcrumbs a::text</code>
+</div>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded">to_array()</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded">join(' &gt; ')</span>
+</div>
+</div>
+<!-- Add Field Trigger -->
+<button class="w-full py-sm bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md rounded flex items-center justify-center gap-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Append Target Schema Field</span>
+</button>
+</div>
+<!-- VIEW 2: YAML / Spec Viewer (Initially hidden via class toggle) -->
+<div class="hidden bg-surface-container-lowest rounded-lg p-md font-code-sm text-code-sm text-on-surface-variant space-y-2xs overflow-x-auto shadow-inner" id="code-spec-panel">
+<div class="text-outline-variant select-none font-code-sm"># ScrapeFlow Spec v2.4</div>
+<div><span class="text-primary">schema_id:</span> <span class="text-secondary">e-commerce-product-catalog.v3</span></div>
+<div><span class="text-primary">version:</span> <span class="text-tertiary">3.1.0</span></div>
+<div><span class="text-primary">engine:</span> <span class="text-on-surface">chromium-headless-stealth</span></div>
+<div><span class="text-primary">fields:</span></div>
+<div class="pl-md"><span class="text-primary">sku:</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">selector:</span> <span class="text-secondary">'[data-product-id]'</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">type:</span> <span class="text-tertiary">string</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">pipeline:</span> <span class="text-on-surface">[trim, "regex_extract('^SKU-([0-9]+)')"]</span></div>
+<div class="pl-md"><span class="text-primary">current_price:</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">selector:</span> <span class="text-secondary">'.price-current'</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">type:</span> <span class="text-tertiary">float</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">pipeline:</span> <span class="text-on-surface">[remove_currency_symbols, to_float]</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">validate:</span> <span class="text-on-surface">{ min: 0.01, alert_if_null: true }</span></div>
+<div class="pl-md"><span class="text-primary">variant_colors:</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">selector:</span> <span class="text-secondary">'.swatch-list li::attr(data-color)'</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">type:</span> <span class="text-tertiary">array&lt;string&gt;</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">pipeline:</span> <span class="text-on-surface">[to_array, dedup]</span></div>
+</div>
+</div>
+<!-- RIGHT PANEL: Selector Sandbox, Fallback Chains & Code Exporter (Col 9-12) -->
+<div class="xl:col-span-4 flex flex-col space-y-md">
+<!-- Live Selector Sandbox Tester -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">pest_control</span>
+<span>Selector Sandbox Tester</span>
+</div>
+<span class="bg-secondary/15 text-secondary text-label-sm font-label-sm px-xs py-2xs rounded font-semibold">14 MATCHES</span>
+</div>
+<div class="space-y-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Test Payload Source</span>
+<div class="flex items-center gap-xs text-primary font-code-sm">
+<span class="cursor-pointer hover:underline">Fetch live URL</span>
+<span>|</span>
+<span class="text-on-surface">Raw DOM</span>
+</div>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface font-code-sm text-code-sm px-sm py-xs rounded focus:outline-none" type="text" value="https://store.acme-sample.io/products/alpha-runner-x9"/>
+</div>
+<!-- Sandbox Selector Quick Input -->
+<div class="space-y-2xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase">Evaluate Query</label>
+<div class="flex items-center gap-xs bg-surface-container-lowest p-2xs rounded">
+<span class="material-symbols-outlined text-[16px] text-primary pl-xs">search</span>
+<input class="w-full bg-transparent text-secondary font-code-sm text-code-sm focus:outline-none" type="text" value=".swatch-list li::attr(data-color)"/>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-sm py-2xs rounded" type="button">Test</button>
+</div>
+</div>
+<!-- Live Matches Visualizer / Payload Inspector -->
+<div class="space-y-xs pt-xs">
+<div class="text-label-sm font-label-sm uppercase text-on-surface-variant flex items-center justify-between">
+<span>Extracted Payload Preview</span>
+<span class="font-code-sm text-code-sm text-secondary">2.8ms exec</span>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded space-y-xs font-code-sm text-code-sm max-h-48 overflow-y-auto">
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">1</span>
+<span class="text-primary">"variant_colors":</span>
+<span class="text-secondary">[ "Obsidian Black", "Cyber Cyan", "Solar Flare" ]</span>
+</div>
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">2</span>
+<span class="text-primary">"current_price":</span>
+<span class="text-tertiary">149.99</span>
+</div>
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">3</span>
+<span class="text-primary">"sku":</span>
+<span class="text-on-surface">"948201"</span>
+</div>
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">4</span>
+<span class="text-primary">"inventory_count":</span>
+<span class="text-tertiary">42</span>
+</div>
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">5</span>
+<span class="text-primary">"breadcrumbs":</span>
+<span class="text-on-surface">"Footwear &gt; Performance &gt; Trail"</span>
+</div>
+</div>
+</div>
+<!-- Selector Fallback Resilience Cascade -->
+<div class="p-sm bg-surface-container rounded space-y-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant uppercase">Fallback Selector Chain</span>
+<span class="text-secondary flex items-center gap-2xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Auto-Heal Armed</span>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm">
+<span class="bg-surface-container-high px-xs py-2xs rounded text-primary">CSS Path</span>
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_right_alt</span>
+<span class="bg-surface-container-high px-xs py-2xs rounded text-on-surface">XPath Exact</span>
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_right_alt</span>
+<span class="bg-surface-container-high px-xs py-2xs rounded text-tertiary">LLM Vision Heuristic</span>
+</div>
+</div>
+</div>
+<!-- Code Export Dispatcher (Tabs: Scrapy, Playwright, cURL, Golang) -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">data_object</span>
+<span>Generated Extraction Snippet</span>
+</span>
+<button class="flex items-center gap-2xs text-primary hover:text-primary-fixed text-label-sm font-label-sm" id="copy-btn" onclick="copySnippet()" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<!-- Export Tabs -->
+<div class="flex items-center gap-2xs bg-surface-container-lowest p-2xs rounded font-label-sm text-label-sm overflow-x-auto">
+<button class="px-xs py-2xs rounded bg-surface-container-high text-primary font-semibold" id="snip-scrapy" onclick="switchSnippet('scrapy')" type="button">Python Scrapy</button>
+<button class="px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface" id="snip-playwright" onclick="switchSnippet('playwright')" type="button">Playwright Node</button>
+<button class="px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface" id="snip-curl" onclick="switchSnippet('curl')" type="button">cURL Stream</button>
+<button class="px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface" id="snip-go" onclick="switchSnippet('go')" type="button">Golang Colly</button>
+</div>
+<!-- Code block container -->
+<pre class="bg-surface-container-lowest p-sm rounded font-code-sm text-code-sm text-on-surface overflow-x-auto select-all leading-relaxed" id="code-snippet-box"><code><span class="text-tertiary">import</span> scrapy
+<span class="text-tertiary">import</span> re
+
+<span class="text-primary">class</span> <span class="text-secondary">EcomProductSpider</span>(scrapy.Spider):
+    name = <span class="text-secondary">"ecom_catalog"</span>
+    
+    <span class="text-primary">def</span> <span class="text-on-surface">parse</span>(self, response):
+        raw_sku = response.css(<span class="text-secondary">'[data-product-id]::attr(data-product-id)'</span>).get()
+        sku = re.search(<span class="text-secondary">r'^SKU-([0-9]+)'</span>, raw_sku.strip()).group(<span class="text-tertiary">1</span>)
+        
+        price_raw = response.css(<span class="text-secondary">'.price-current::text'</span>).get()
+        price = float(re.sub(<span class="text-secondary">r'[^\d.]'</span>, <span class="text-secondary">''</span>, price_raw))
+        
+        <span class="text-tertiary">yield</span> {
+            <span class="text-primary">'sku'</span>: sku,
+            <span class="text-primary">'current_price'</span>: price,
+            <span class="text-primary">'colors'</span>: response.css(<span class="text-secondary">'.swatch-list li::attr(data-color)'</span>).getall(),
+            <span class="text-primary">'breadcrumbs'</span>: <span class="text-secondary">' &gt; '</span>.join(response.css(<span class="text-secondary">'nav.breadcrumbs a::text'</span>).getall())
+        }</code></pre>
+</div>
+<!-- Execution Limits & Trigger Sandbox Pipeline -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Dry-Run in Isolated Worker</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Allocates 1 ephemeral Chromium node</span>
+</div>
+</div>
+<button class="px-md py-xs bg-secondary text-on-secondary font-label-md text-label-md rounded font-semibold hover:bg-secondary-fixed transition-colors shadow-sm" type="button">
+          Run Dry-Test
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchView(view) {
+    const visualPanel = document.getElementById('visual-builder-panel');
+    const codePanel = document.getElementById('code-spec-panel');
+    const tabVisual = document.getElementById('tab-visual');
+    const tabCode = document.getElementById('tab-code');
+
+    if (view === 'visual') {
+      visualPanel.classList.remove('hidden');
+      codePanel.classList.add('hidden');
+      tabVisual.classList.add('bg-surface-container-high', 'text-primary');
+      tabVisual.classList.remove('text-on-surface-variant');
+      tabCode.classList.remove('bg-surface-container-high', 'text-primary');
+      tabCode.classList.add('text-on-surface-variant');
+    } else {
+      visualPanel.classList.add('hidden');
+      codePanel.classList.remove('hidden');
+      tabCode.classList.add('bg-surface-container-high', 'text-primary');
+      tabCode.classList.remove('text-on-surface-variant');
+      tabVisual.classList.remove('bg-surface-container-high', 'text-primary');
+      tabVisual.classList.add('text-on-surface-variant');
+    }
+  }
+
+  const snippets = {
+    scrapy: `import scrapy\\nimport re\\n\\nclass EcomProductSpider(scrapy.Spider):\\n    name = "ecom_catalog"\\n    def parse(self, response):\\n        raw_sku = response.css('[data-product-id]::attr(data-product-id)').get()\\n        sku = re.search(r'^SKU-([0-9]+)', raw_sku.strip()).group(1)\\n        price_raw = response.css('.price-current::text').get()\\n        price = float(re.sub(r'[^\\\\d.]', '', price_raw))\\n        yield {'sku': sku, 'current_price': price}`,
+    playwright: `import { chromium } from 'playwright';\\n\\nconst browser = await chromium.launch();\\nconst page = await browser.newPage();\\nawait page.goto(targetUrl);\\nconst sku = await page.$eval('[data-product-id]', el => el.getAttribute('data-product-id').replace(/^SKU-/, ''));\\nconst price = await page.$eval('.price-current', el => parseFloat(el.innerText.replace(/[^0-9.]/g, '')));\\nconsole.log({ sku, price });`,
+    curl: `curl -X POST "https://api.scrapeflow.io/v2/extract" \\\\\\n  -H "Authorization: Bearer sf_live_938a4bc7" \\\\\\n  -H "Content-Type: application/json" \\\\\\n  -d '{"schema": "e-commerce-product-catalog.v3", "url": "https://store.acme-sample.io/pdp"}'`,
+    go: `package main\\n\\nimport (\\n    "github.com/gocolly/colly/v2"\\n    "fmt"\\n)\\n\\nfunc main() {\\n    c := colly.NewCollector()\\n    c.OnHTML("[data-product-id]", func(e *colly.HTMLElement) {\\n        fmt.Println("SKU:", e.Attr("data-product-id"))\\n    })\\n    c.Visit("https://store.acme-sample.io/pdp")\\n}`
+  };
+
+  function switchSnippet(type) {
+    ['scrapy', 'playwright', 'curl', 'go'].forEach(t => {
+      const btn = document.getElementById('snip-' + t);
+      if (t === type) {
+        btn.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        btn.classList.remove('bg-surface-container-high', 'text-primary', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+
+    const box = document.getElementById('code-snippet-box');
+    box.innerText = snippets[type].replace(/\\n/g, '\n');
+  }
+
+  function copySnippet() {
+    const box = document.getElementById('code-snippet-box');
+    navigator.clipboard.writeText(box.innerText);
+    const btn = document.getElementById('copy-btn');
+    btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">check</span><span>Copied!</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">content_copy</span><span>Copy</span>`;
+    }, 2000);
+  }
+</script></main></div></body></html>

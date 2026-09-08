@@ -1,0 +1,2431 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#031427", "primary-fixed": "#d8e2ff", "outline-variant": "#424754", "surface-tint": "#adc6ff", "on-tertiary": "#472a00", "on-surface-variant": "#c2c6d6", "surface-container-low": "#0b1c30", "error": "#ffb4ab", "on-surface": "#d3e4fe", "on-primary-fixed": "#001a42", "secondary-fixed-dim": "#4edea3", "tertiary-fixed": "#ffddb8", "tertiary-container": "#ca8100", "inverse-primary": "#005ac2", "surface-bright": "#2a3a4f", "on-primary-container": "#00285d", "surface-container-lowest": "#000f21", "on-tertiary-container": "#3e2400", "primary-fixed-dim": "#adc6ff", "outline": "#8c909f", "on-primary-fixed-variant": "#004395", "primary": "#adc6ff", "secondary-container": "#00a572", "on-primary": "#002e6a", "background": "#031427", "on-secondary": "#003824", "surface-container-high": "#1b2b3f", "on-secondary-container": "#00311f", "secondary-fixed": "#6ffbbe", "on-secondary-fixed": "#002113", "on-secondary-fixed-variant": "#005236", "surface-container-highest": "#26364a", "inverse-on-surface": "#213145", "on-background": "#d3e4fe", "on-tertiary-fixed-variant": "#653e00", "on-error-container": "#ffdad6", "inverse-surface": "#d3e4fe", "primary-container": "#4d8eff", "surface-dim": "#031427", "surface-variant": "#26364a", "secondary": "#4edea3", "tertiary": "#ffb95f", "tertiary-fixed-dim": "#ffb95f", "error-container": "#93000a", "on-error": "#690005", "surface-container": "#102034", "on-tertiary-fixed": "#2a1700" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1rem", "margin-mobile": "1rem", "margin-desktop": "1.5rem", "2xl": "2rem", "2xs": "0.125rem", "sm": "0.5rem", "3xl": "3rem", "xs": "0.25rem", "md": "0.75rem", "xl": "1.5rem", "lg": "1rem" }, "fontFamily": { "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "headline-lg": [ "Inter" ], "headline-md": [ "Inter" ], "body-sm": [ "Inter" ], "code-md": [ "JetBrains Mono" ], "headline-xl": [ "Inter" ], "code-sm": [ "JetBrains Mono" ], "headline-xl-mobile": [ "Inter" ], "label-sm": [ "JetBrains Mono" ], "label-md": [ "JetBrains Mono" ], "code-lg": [ "JetBrains Mono" ] }, "fontSize": { "body-md": [ "13px", { "lineHeight": "18px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "body-lg": [ "15px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-md": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "code-md": [ "12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-xl-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-sm": [ "10px", { "lineHeight": "12px", "letterSpacing": "0.06em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ], "code-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30"><div class="h-14 px-lg flex items-center gap-xs border-b border-outline-variant/20"><img alt="ScrapeFlow Terminal Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WIv3jfadeVK7rGEbEXwV8auc3N6upx3Ha8YzJrQ2snFtnPG3DwcmQkha8Om_33p1O9qacJ123oZKGBtQIgQtA7GMofr7RBlOPKLkTVfcqqkFnuFr4U9pTVbtX7VCKgRqz1BSxHpUV5ahK62Hw2Eky-khG8pvJcaskXBiXKjPTdaJLauzGoKQLjyfCLwKOnchHoYfD11MU054JU5j0qB235sGQHTvPMXCWTx6K_h3xI4q9IXqo3YVy51_A"/><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-semibold ml-xs">ScrapeFlow</span><span class="ml-auto text-label-sm font-label-sm uppercase bg-surface-container-high text-primary px-xs py-2xs rounded">v2.4</span></div><div class="px-md py-sm"><div class="flex items-center justify-between px-xs py-2xs text-label-sm font-label-sm uppercase text-on-surface-variant/70"><span>Navigation Core</span><span class="material-symbols-outlined text-[14px]">keyboard_arrow_down</span></div></div><nav class="flex-1 px-sm space-y-2xs" data-active-classes="bg-surface-container-high text-primary font-semibold border-l-2 border-primary"><a aria-current="page" class="flex items-center gap-sm px-md py-sm rounded transition-colors bg-surface-container-high text-primary font-semibold border-l-2 border-primary" data-path="extraction-studio" href="index.html"><span class="material-symbols-outlined text-[18px]">terminal</span><span>Extraction Studio</span></a><a class="flex items-center justify-between px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="active-scrape-jobs-and-pipelines" href="#"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[18px]">layers</span><span>Active Scrape Jobs</span></div><span class="bg-primary/15 text-primary text-label-sm font-label-sm px-xs py-2xs rounded-full flex items-center gap-2xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>4 running</span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="data-schema-and-selector-rules" href="schema_selectors.html"><span class="material-symbols-outlined text-[18px]">code</span><span>Schema &amp; Selectors</span></a><a class="flex items-center justify-between px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="proxies-and-anti-bot-steer" href="proxies_antibot.html"><div class="flex items-center gap-sm"><span class="material-symbols-outlined text-[18px]">shield</span><span>Proxies &amp; Anti-Bot</span></div><span class="w-2 h-2 rounded-full bg-secondary" title="99.4% Pool Healthy"></span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="api-and-webhook-dispatcher" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span><span>API &amp; Webhooks</span></a><a class="flex items-center gap-sm px-md py-sm rounded text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings-and-concurrency-limits" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings &amp; Limits</span></a></nav><div class="p-md border-t border-outline-variant/20 bg-surface-container-low/50"><div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant"><div class="flex items-center gap-xs"><span class="w-2 h-2 rounded-full bg-secondary"></span><span>Pool Healthy</span></div><span class="text-secondary font-code-sm text-code-sm">99.4%</span></div><div class="w-full bg-surface-container-highest h-1 rounded-full mt-xs overflow-hidden"><div class="bg-secondary h-full rounded-full" style="width: 99.4%"></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-14 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/20 z-40 px-lg flex items-center justify-between gap-md"><div class="flex items-center gap-md"><div class="flex items-center gap-xs bg-surface-container-low border border-outline-variant/30 px-sm py-2xs rounded font-code-sm text-code-sm text-on-surface cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">dns</span><span class="font-code-sm text-code-sm text-on-surface">prod-ecom-crawler-us-east</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">unfold_more</span></div><div class="flex items-center gap-xs bg-surface-container-low border border-outline-variant/30 px-md py-2xs rounded text-on-surface-variant w-72 cursor-pointer hover:border-outline transition-colors"><span class="material-symbols-outlined text-[16px]">search</span><span class="font-body-sm text-body-sm text-on-surface-variant flex-1 truncate">Cmd + K to jump or run...</span><kbd class="bg-surface-container-highest px-xs py-2xs rounded font-code-sm text-[10px] text-on-surface-variant border border-outline-variant/30">⌘K</kbd></div></div><div class="flex items-center gap-md"><div class="hidden lg:flex items-center gap-xs bg-surface-container px-sm py-2xs rounded border border-outline-variant/20 font-code-sm text-code-sm text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="text-on-surface">32/40 Workers Active</span><span class="text-outline-variant">•</span><span class="text-primary">12.4 req/s</span></div><button class="flex items-center gap-xs bg-primary-container text-on-primary-container px-md py-xs rounded font-label-md text-label-md hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">play_arrow</span><span>Run Extraction</span></button><div class="flex items-center gap-xs border-l border-outline-variant/30 pl-md"><button class="p-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-1.5 h-1.5 rounded-full bg-error"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8IqL6kWvrlvAWMqQNRKEI7u9615o-kOQel-edWukvpqxnxEifVdoqZzH0FprnOFAuuByLew5T2uN1ttQ2J-LsGN37BxYNOqQdmxzzGRzgV71r_G6PgE-ibLBXUmIWWixYDeU0SbLHECkYsrgNbHwrL3YGkuBDQIf8a3TsjRW4hfd1CN12IkLCX1INaHwYY6FrIHAdcja-XiisHNQkMQ-AKxV0vo91fsRY7Ql4--6fgHLDo7hJ1ezljw"/><span class="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div></div></div></header><main id="view-extraction-studio" class="relative pt-14 w-full px-margin-desktop bg-background min-h-screen">
+<div class="flex flex-col w-full space-y-md pb-xl">
+<!-- Top Command & Configuration Bar -->
+<section class="flex flex-col gap-sm bg-surface-container-low p-md rounded-xl shadow-md">
+<!-- Target URL & Primary Trigger Row -->
+<div class="flex flex-wrap items-center gap-sm">
+<!-- Method Selector Pill -->
+<div class="flex items-center bg-surface-container-highest px-xs py-2xs rounded-lg text-primary font-label-md text-label-md">
+<span class="px-sm py-2xs bg-primary-container text-on-primary-container rounded font-label-sm text-label-sm font-semibold tracking-wider">GET</span>
+<button class="px-xs py-2xs text-on-surface-variant hover:text-on-surface flex items-center" type="button">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>
+</button>
+</div>
+<!-- URL Input Field with inline protocol badge -->
+<div class="flex-1 min-w-[320px] flex items-center bg-surface-container px-sm py-xs rounded-lg">
+<span class="font-code-sm text-code-sm text-secondary bg-surface-container-highest px-xs py-2xs rounded mr-xs">HTTPS</span>
+<input class="flex-1 bg-transparent font-code-md text-code-md text-on-surface focus:outline-none placeholder:text-outline select-all" spellcheck="false" type="text" value="https://market-intel.domain.com/v2/catalog?category=gpus&amp;page=1"/>
+<div class="flex items-center gap-xs ml-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant/60 hidden sm:inline">200 OK • 286ms</span>
+<button class="p-2xs text-on-surface-variant hover:text-on-surface transition-colors" title="Clear URL" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-xs">
+<button class="flex items-center gap-xs bg-primary text-on-primary font-label-md text-label-md px-lg py-xs rounded-lg shadow-sm hover:bg-primary-fixed transition-colors active:scale-95" id="btn-execute-scrape" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+<span>Execute Scrape</span>
+<kbd class="bg-surface-container-lowest/30 text-on-primary px-xs py-2xs rounded font-code-sm text-code-sm ml-xs">⌘↵</kbd>
+</button>
+<button class="p-xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" title="Save Scrape Blueprint" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+<button class="p-xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" title="Export as cURL / Python" type="button">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+</div>
+</div>
+<!-- Quick Config Toggles Strip -->
+<div class="flex flex-wrap items-center justify-between gap-sm pt-xs">
+<div class="flex flex-wrap items-center gap-xs">
+<!-- Toggle: JS Rendering -->
+<button class="flex items-center gap-xs px-sm py-2xs rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm transition-all hover:brightness-110" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="material-symbols-outlined text-[14px]">javascript</span>
+<span>Playwright / Chrome 122</span>
+</button>
+<!-- Toggle: Residential Proxy -->
+<button class="flex items-center gap-xs px-sm py-2xs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-all" type="button">
+<span class="material-symbols-outlined text-[14px] text-primary">public</span>
+<span>Residential IP (US-East)</span>
+<span class="text-on-surface-variant">#Pool-B2</span>
+</button>
+<!-- Toggle: Auto Solve CAPTCHA -->
+<button class="flex items-center gap-xs px-sm py-2xs rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm hover:brightness-110" type="button">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+<span>Turnstile Auto-Bypass</span>
+</button>
+<!-- Toggle: Bot Detection Fingerprint -->
+<button class="flex items-center gap-xs px-sm py-2xs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[14px] text-tertiary">fingerprint</span>
+<span>Spoof v4 (Canvas + WebGL)</span>
+</button>
+</div>
+<!-- Collapsible Request Drawer Triggers -->
+<div class="flex items-center gap-xs">
+<button class="flex items-center gap-2xs px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Headers (4)</span>
+</button>
+<button class="flex items-center gap-2xs px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[14px]">cookie</span>
+<span>Cookies (2)</span>
+</button>
+<button class="flex items-center gap-2xs px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface font-code-sm text-code-sm bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>Wait: 1500ms</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Dual-Pane Core IDE Canvas -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-md items-start">
+<!-- LEFT PANE: Schema & Selector Rules Engine (5 cols) -->
+<section class="xl:col-span-5 flex flex-col gap-sm">
+<!-- Panel Header & Quick Actions -->
+<div class="flex items-center justify-between bg-surface-container-low px-md py-sm rounded-xl">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">data_object</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Extraction Schema</h2>
+<span class="px-xs py-2xs bg-surface-container-highest text-primary font-label-sm text-label-sm rounded">5 Fields</span>
+</div>
+<button class="flex items-center gap-xs px-sm py-2xs bg-tertiary-container text-on-tertiary-container hover:brightness-110 rounded font-label-sm text-label-sm transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>AI Auto-Detect</span>
+</button>
+</div>
+<!-- Field Selector Rules List -->
+<div class="flex flex-col gap-xs">
+<!-- Field 1: Title -->
+<div class="group bg-surface-container-low hover:bg-surface-container p-sm rounded-xl transition-all shadow-sm">
+<div class="flex items-center justify-between mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-code-md text-code-md font-semibold text-primary">title</span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-xs py-2xs rounded">String</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-code-sm text-code-sm text-secondary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 48 matches
+              </span>
+<button class="opacity-0 group-hover:opacity-100 p-2xs text-on-surface-variant hover:text-on-surface transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-xs bg-surface-container-lowest px-sm py-xs rounded">
+<span class="font-label-sm text-label-sm text-tertiary">CSS</span>
+<code class="font-code-sm text-code-sm text-on-surface flex-1 truncate">h1.product-title, .p-name</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">filter_center_focus</span>
+</button>
+</div>
+</div>
+<!-- Field 2: Price -->
+<div class="group bg-surface-container-low hover:bg-surface-container p-sm rounded-xl transition-all shadow-sm">
+<div class="flex items-center justify-between mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-code-md text-code-md font-semibold text-primary">price</span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-xs py-2xs rounded">Currency / Float</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-code-sm text-code-sm text-secondary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 48 matches
+              </span>
+<button class="opacity-0 group-hover:opacity-100 p-2xs text-on-surface-variant hover:text-on-surface transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-xs bg-surface-container-lowest px-sm py-xs rounded">
+<span class="font-label-sm text-label-sm text-primary">XPATH</span>
+<code class="font-code-sm text-code-sm text-on-surface flex-1 truncate">//span[contains(@class,'price-tag')]/text()</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">filter_center_focus</span>
+</button>
+</div>
+</div>
+<!-- Field 3: Stock Status -->
+<div class="group bg-surface-container-low hover:bg-surface-container p-sm rounded-xl transition-all shadow-sm">
+<div class="flex items-center justify-between mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-code-md text-code-md font-semibold text-primary">stock_status</span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-xs py-2xs rounded">Enum</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-code-sm text-code-sm text-secondary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 48 matches
+              </span>
+<button class="opacity-0 group-hover:opacity-100 p-2xs text-on-surface-variant hover:text-on-surface transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-xs bg-surface-container-lowest px-sm py-xs rounded">
+<span class="font-label-sm text-label-sm text-tertiary">CSS</span>
+<code class="font-code-sm text-code-sm text-on-surface flex-1 truncate">.availability-badge</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">filter_center_focus</span>
+</button>
+</div>
+</div>
+<!-- Field 4: Rating Score -->
+<div class="group bg-surface-container-low hover:bg-surface-container p-sm rounded-xl transition-all shadow-sm">
+<div class="flex items-center justify-between mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-code-md text-code-md font-semibold text-primary">rating_score</span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-xs py-2xs rounded">Regex / Number</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-code-sm text-code-sm text-tertiary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 46 matches (2 null)
+              </span>
+<button class="opacity-0 group-hover:opacity-100 p-2xs text-on-surface-variant hover:text-on-surface transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-xs bg-surface-container-lowest px-sm py-xs rounded">
+<span class="font-label-sm text-label-sm text-error">REGEX</span>
+<code class="font-code-sm text-code-sm text-on-surface flex-1 truncate">/([0-9.]+) out of 5/</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">filter_center_focus</span>
+</button>
+</div>
+</div>
+<!-- Field 5: Product Image URL -->
+<div class="group bg-surface-container-low hover:bg-surface-container p-sm rounded-xl transition-all shadow-sm">
+<div class="flex items-center justify-between mb-xs">
+<div class="flex items-center gap-xs">
+<span class="font-code-md text-code-md font-semibold text-primary">image_url</span>
+<span class="bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm px-xs py-2xs rounded">URL</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-code-sm text-code-sm text-secondary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 48 matches
+              </span>
+<button class="opacity-0 group-hover:opacity-100 p-2xs text-on-surface-variant hover:text-on-surface transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-xs bg-surface-container-lowest px-sm py-xs rounded">
+<span class="font-label-sm text-label-sm text-tertiary">CSS ATTR</span>
+<code class="font-code-sm text-code-sm text-on-surface flex-1 truncate">img.gallery-main::attr(src)</code>
+<button class="text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">filter_center_focus</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Add Field Button -->
+<button class="flex items-center justify-center gap-xs bg-surface-container hover:bg-surface-container-high text-on-surface py-xs rounded-xl font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Add Field Mapping</span>
+</button>
+<!-- Pagination, Depth & Crawl Limits Settings Card -->
+<div class="bg-surface-container-low p-md rounded-xl space-y-sm shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">route</span>
+<span class="font-headline-md text-headline-md text-on-surface text-[15px]">Crawl &amp; Pagination Engine</span>
+</div>
+<span class="px-xs py-2xs bg-secondary/15 text-secondary font-label-sm text-label-sm rounded">ACTIVE</span>
+</div>
+<div class="space-y-xs">
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase">Next Page Selector</label>
+<div class="flex items-center bg-surface-container-lowest px-sm py-xs rounded">
+<code class="font-code-sm text-code-sm text-secondary flex-1">a[rel='next'], button.load-more-btn</code>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">touch_app</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm pt-xs">
+<div class="bg-surface-container p-xs rounded-lg">
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase">Max Depth</span>
+<div class="flex items-center justify-between mt-2xs">
+<span class="font-code-lg text-code-lg text-on-surface font-semibold">50 pages</span>
+<span class="material-symbols-outlined text-[14px] text-primary">auto_stories</span>
+</div>
+</div>
+<div class="bg-surface-container p-xs rounded-lg">
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase">Rate Limit</span>
+<div class="flex items-center justify-between mt-2xs">
+<span class="font-code-lg text-code-lg text-on-surface font-semibold">8.0 req/sec</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">speed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Sample Extraction Preview Card (Visual Richness / Placeholder) -->
+<div class="bg-surface-container-low p-md rounded-xl shadow-sm flex items-center gap-md">
+<img class="w-20 h-20 rounded-lg object-cover bg-surface-container-highest" data-alt="A clean modern graphic rendering of a high-end graphic processing unit GPU hardware component with deep dark metallic textures, neon turquoise glow accents, and subtle cyan reflection highlights matching dark enterprise software." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0OJnXXagYQl_IkRrEjl1CG12DPsbhPlYv1Ys_sXmSxeicY7Xl097lPeTrgozVUkOhvfDuBqRqogFWvVFETeJTZhpNTGFFfAlvboufHSQT41vXRPj6pdLYcbqydmIJlwY7IqUGVjWySv3LrmferqUzDUk9--5DUg5eV6N2gJKhFH_O2_8cy5Tx4nvtVcx0kGovEk8hldu7lu6tAZiA_K6vR7Zja6Ps4KznwkmEPKnS8jexBdoD0_1nUQ"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm bg-secondary/15 text-secondary px-xs py-2xs rounded">First Record Match</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate">ID: #0829-RTX</span>
+</div>
+<h4 class="font-body-md text-body-md text-on-surface font-semibold truncate mt-2xs">GeForce RTX 4090 OC 24GB Titanium</h4>
+<div class="flex items-center gap-md mt-xs font-code-sm text-code-sm text-on-surface-variant">
+<span class="text-secondary font-semibold">$1,699.99</span>
+<span>•</span>
+<span class="text-tertiary">★ 4.9/5</span>
+<span>•</span>
+<span class="text-secondary">In Stock</span>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT PANE: Live Execution Output, JSON Viewer & Terminal (7 cols) -->
+<section class="xl:col-span-7 flex flex-col gap-sm">
+<!-- Execution Studio Output Container -->
+<div class="bg-surface-container-low rounded-xl shadow-md overflow-hidden flex flex-col min-h-[580px]">
+<!-- Tabbed Header for Output Types -->
+<div class="flex flex-wrap items-center justify-between bg-surface-container-lowest px-md py-xs">
+<div class="flex items-center gap-xs">
+<!-- Active Tab -->
+<button class="flex items-center gap-xs px-sm py-xs bg-surface-container-high text-primary rounded-lg font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[16px]">data_array</span>
+<span>Parsed JSON</span>
+<span class="bg-primary/20 text-primary px-xs py-2xs rounded-full font-label-sm text-label-sm">48</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:text-on-surface rounded-lg font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">html</span>
+<span>Response HTML</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:text-on-surface rounded-lg font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">device_hub</span>
+<span>DOM Tree</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs text-on-surface-variant hover:text-on-surface rounded-lg font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">monitor_heart</span>
+<span>Network</span>
+</button>
+</div>
+<!-- Output Export Controls -->
+<div class="flex items-center gap-xs pt-xs sm:pt-0">
+<button class="flex items-center gap-2xs px-xs py-2xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded font-code-sm text-code-sm transition-colors" title="Copy JSON payload" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+<button class="flex items-center gap-2xs px-xs py-2xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded font-code-sm text-code-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span>JSON</span>
+</button>
+<button class="flex items-center gap-2xs px-xs py-2xs bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface rounded font-code-sm text-code-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">table_view</span>
+<span>CSV</span>
+</button>
+<button class="flex items-center gap-2xs px-xs py-2xs bg-primary-container text-on-primary-container hover:bg-primary transition-colors rounded font-code-sm text-code-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+<span>Webhook</span>
+</button>
+</div>
+</div>
+<!-- Telemetry Summary Bar -->
+<div class="flex flex-wrap items-center justify-between px-md py-xs bg-surface-container font-code-sm text-code-sm text-on-surface-variant">
+<div class="flex items-center gap-md">
+<span class="text-secondary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 48 Items Extracted
+            </span>
+<span>Payload Size: <strong class="text-on-surface">38.4 KB</strong></span>
+<span>Parsing Time: <strong class="text-secondary">42ms</strong></span>
+</div>
+<div class="flex items-center gap-xs">
+<span>Validation:</span>
+<span class="text-secondary bg-secondary/15 px-xs py-2xs rounded font-label-sm text-label-sm">100% Validated</span>
+</div>
+</div>
+<!-- Rich Interactive JSON Viewer Canvas -->
+<div class="flex-1 p-md font-code-sm text-code-sm overflow-x-auto bg-surface-container-lowest leading-relaxed text-on-surface">
+<pre class="font-code-sm text-code-sm"><span class="text-on-surface-variant/50">// Schema execution output: 48 items parsed against 5 selector rules</span>
+[
+  {
+    <span class="text-primary">"item_index"</span>: <span class="text-tertiary">0</span>,
+    <span class="text-primary">"title"</span>: <span class="text-secondary">"GeForce RTX 4090 OC 24GB Titanium Series"</span>,
+    <span class="text-primary">"price"</span>: <span class="text-tertiary">1699.99</span>,
+    <span class="text-primary">"currency"</span>: <span class="text-secondary">"USD"</span>,
+    <span class="text-primary">"stock_status"</span>: <span class="text-secondary">"IN_STOCK"</span>,
+    <span class="text-primary">"rating_score"</span>: <span class="text-tertiary">4.9</span>,
+    <span class="text-primary">"image_url"</span>: <span class="text-secondary">"https://assets.domain.com/catalog/gpu-titanium-4090.webp"</span>,
+    <span class="text-primary">"extracted_at"</span>: <span class="text-on-surface-variant">"2025-02-23T14:22:01.590Z"</span>,
+    <span class="text-primary">"source_meta"</span>: {
+      <span class="text-primary">"dom_depth"</span>: <span class="text-tertiary">14</span>,
+      <span class="text-primary">"xpath_eval_time_ms"</span>: <span class="text-tertiary">1.2</span>
+    }
+  },
+  {
+    <span class="text-primary">"item_index"</span>: <span class="text-tertiary">1</span>,
+    <span class="text-primary">"title"</span>: <span class="text-secondary">"Radeon RX 7900 XTX 24GB Vapor-X Gaming Edition"</span>,
+    <span class="text-primary">"price"</span>: <span class="text-tertiary">949.50</span>,
+    <span class="text-primary">"currency"</span>: <span class="text-secondary">"USD"</span>,
+    <span class="text-primary">"stock_status"</span>: <span class="text-secondary">"LOW_STOCK"</span>,
+    <span class="text-primary">"rating_score"</span>: <span class="text-tertiary">4.7</span>,
+    <span class="text-primary">"image_url"</span>: <span class="text-secondary">"https://assets.domain.com/catalog/rx-7900-vapor.webp"</span>,
+    <span class="text-primary">"extracted_at"</span>: <span class="text-on-surface-variant">"2025-02-23T14:22:01.591Z"</span>
+  },
+  {
+    <span class="text-primary">"item_index"</span>: <span class="text-tertiary">2</span>,
+    <span class="text-primary">"title"</span>: <span class="text-secondary">"GeForce RTX 4080 Super Ultra 16GB Dual BIOS"</span>,
+    <span class="text-primary">"price"</span>: <span class="text-tertiary">1049.00</span>,
+    <span class="text-primary">"currency"</span>: <span class="text-secondary">"USD"</span>,
+    <span class="text-primary">"stock_status"</span>: <span class="text-secondary">"IN_STOCK"</span>,
+    <span class="text-primary">"rating_score"</span>: <span class="text-tertiary">4.8</span>,
+    <span class="text-primary">"image_url"</span>: <span class="text-secondary">"https://assets.domain.com/catalog/rtx-4080s-ultra.webp"</span>,
+    <span class="text-primary">"extracted_at"</span>: <span class="text-on-surface-variant">"2025-02-23T14:22:01.592Z"</span>
+  },
+  <span class="text-on-surface-variant/40">// ... 45 additional records hidden (expand preview)</span>
+]</pre>
+</div>
+<!-- Telemetry Execution Sparkline & Latency Micro-Chart -->
+<div class="px-md py-sm bg-surface-container flex flex-wrap items-center justify-between gap-sm">
+<div class="flex items-center gap-sm">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Execution Timing</span>
+<!-- Inline SVG Sparkline -->
+<svg class="w-36 h-6 text-primary" fill="none" viewbox="0 0 120 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 18L15 14L30 19L45 8L60 12L75 4L90 10L105 3L120 7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<circle cx="105" cy="3" fill="#4edea3" r="2.5"></circle>
+</svg>
+<span class="font-code-sm text-code-sm text-secondary">Peak: 312ms</span>
+</div>
+<div class="flex items-center gap-xs font-code-sm text-code-sm text-on-surface-variant">
+<span>RAM: <strong class="text-on-surface">142MB</strong></span>
+<span>•</span>
+<span>Thread: <strong class="text-on-surface">Worker-07</strong></span>
+<span>•</span>
+<span class="text-secondary">TLS 1.3 HTTP/2</span>
+</div>
+</div>
+<!-- Terminal Streaming Log Drawer -->
+<div class="bg-surface-container-lowest p-sm flex flex-col font-code-sm text-code-sm text-on-surface">
+<div class="flex items-center justify-between pb-2xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span class="uppercase">Live Extraction Worker Stream</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span>Streaming Active</span>
+</div>
+</div>
+<div class="space-y-2xs font-code-sm text-code-sm bg-surface-container/30 p-xs rounded overflow-y-auto max-h-32">
+<div class="flex items-baseline gap-xs">
+<span class="text-on-surface-variant select-none">[14:22:01.042]</span>
+<span class="text-primary font-semibold">[INFO]</span>
+<span class="text-on-surface-variant">[Worker #7]</span>
+<span class="text-on-surface">Dispatching headless Chromium instance (Stealth v2.4, fingerprint profile #402)...</span>
+</div>
+<div class="flex items-baseline gap-xs">
+<span class="text-on-surface-variant select-none">[14:22:01.328]</span>
+<span class="text-secondary font-semibold">[200 OK]</span>
+<span class="text-on-surface-variant">[Worker #7]</span>
+<span class="text-secondary">Handshake established with target (Latency: 286ms, Cloudflare Turnstile token solved).</span>
+</div>
+<div class="flex items-baseline gap-xs">
+<span class="text-on-surface-variant select-none">[14:22:01.590]</span>
+<span class="text-tertiary font-semibold">[EXTRACT]</span>
+<span class="text-on-surface-variant">[Engine]</span>
+<span class="text-on-surface">48 structured records parsed against schema in <span class="text-secondary font-semibold">42ms</span>. Validation: 0 errors.</span>
+</div>
+<div class="flex items-baseline gap-xs">
+<span class="text-on-surface-variant select-none">[14:22:01.612]</span>
+<span class="text-primary font-semibold">[SYNC]</span>
+<span class="text-on-surface-variant">[Dispatcher]</span>
+<span class="text-on-surface">Staging payload for downstream ingestion pipeline (Buffer: 38.4 KB).</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Visual Ingestion Telemetry & Proxy Matrix Footer Widget -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md pt-xs">
+<!-- Proxy Health Visual -->
+<div class="bg-surface-container-low p-md rounded-xl shadow-sm flex items-center gap-md">
+<div class="p-sm bg-surface-container rounded-lg text-secondary">
+<span class="material-symbols-outlined text-[24px]">vpn_lock</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Proxy Health</span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">99.4%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-xs overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 99.4%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2xs block truncate">US-East IP pool rotated 34s ago</span>
+</div>
+</div>
+<!-- Extraction Throughput -->
+<div class="bg-surface-container-low p-md rounded-xl shadow-sm flex items-center gap-md">
+<div class="p-sm bg-surface-container rounded-lg text-primary">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Throughput</span>
+<span class="font-code-sm text-code-sm text-primary font-semibold">1,142 rec/min</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-xs overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2xs block truncate">Pipeline throttle headroom at 22%</span>
+</div>
+</div>
+<!-- Anti-Bot Defense Status -->
+<div class="bg-surface-container-low p-md rounded-xl shadow-sm flex items-center gap-md">
+<div class="p-sm bg-surface-container rounded-lg text-tertiary">
+<span class="material-symbols-outlined text-[24px]">shield</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Defense Clearance</span>
+<span class="font-code-sm text-code-sm text-tertiary font-semibold">Zero Blocks</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full mt-xs overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2xs block truncate">Turnstile + Datadome stealth passing</span>
+</div>
+</div>
+</section>
+<!-- Keyboard Shortcuts & Status Micro-Bar -->
+<div class="flex flex-wrap items-center justify-between text-on-surface-variant/60 font-code-sm text-code-sm px-xs pt-xs">
+<div class="flex items-center gap-md">
+<span><kbd class="bg-surface-container-low px-xs py-2xs rounded text-on-surface-variant font-code-sm text-code-sm">⌘ + ↵</kbd> Run Scrape</span>
+<span><kbd class="bg-surface-container-low px-xs py-2xs rounded text-on-surface-variant font-code-sm text-code-sm">⌘ + S</kbd> Save Blueprint</span>
+<span><kbd class="bg-surface-container-low px-xs py-2xs rounded text-on-surface-variant font-code-sm text-code-sm">⌥ + P</kbd> Preview Selector</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>ScrapeFlow Engine Cluster v2.4 • Ready</span>
+</div>
+</div>
+<script>
+    (function initExtractionStudio() {
+      const execBtn = document.getElementById('btn-execute-scrape');
+      if (execBtn) {
+        execBtn.addEventListener('click', function() {
+          const originalContent = this.innerHTML;
+          this.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Extracting...</span>';
+          this.classList.add('opacity-90');
+          setTimeout(() => {
+            this.innerHTML = originalContent;
+            this.classList.remove('opacity-90');
+          }, 800);
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+          e.preventDefault();
+          if (execBtn) execBtn.click();
+        }
+      });
+    })();
+  </script>
+</div>
+</main>
+<main id="view-active-scrape-jobs" class="relative pt-14 w-full px-margin-desktop bg-background min-h-screen hidden">
+<div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden pb-12">
+<div class="absolute -top-24 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Subheader Utility Bar -->
+<div class="flex flex-wrap items-center justify-between gap-md py-lg">
+<div class="flex flex-col gap-2xs">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+            Live Cluster Orchestration
+          </span>
+<span class="text-outline-variant font-code-sm text-code-sm">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Cluster: us-east-pool-alpha</span>
+</div>
+<div class="flex items-baseline gap-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Active Scrape Jobs &amp; Pipelines</h1>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-high px-xs py-2xs rounded">5 total registered</span>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<div class="bg-surface-container-lowest px-sm py-2xs rounded flex items-center gap-xs font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sync</span>
+<span>Poll Rate: <strong class="text-on-surface">1.0s</strong></span>
+</div>
+<button class="flex items-center gap-xs bg-surface-container-high hover:bg-surface-bright text-on-surface px-md py-xs rounded font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+<span>Halt All</span>
+</button>
+<button class="flex items-center gap-xs bg-primary text-on-primary-container font-label-md text-label-md px-md py-xs rounded transition-colors shadow-md hover:bg-primary-fixed" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Deploy Pipeline</span>
+</button>
+</div>
+</div>
+<!-- KPI Ribbon -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter mb-xl">
+<!-- KPI 1 -->
+<div class="bg-surface-container-low p-lg rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Scraped Today</span>
+<span class="material-symbols-outlined text-primary text-[20px]">dataset</span>
+</div>
+<div class="my-md flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-semibold">1,482,920</span>
+<span class="inline-flex items-center gap-2xs font-code-sm text-code-sm text-secondary bg-surface-container-highest px-xs py-2xs rounded">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>+18.4%
+          </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm">
+<span>vs. 1.25M yesterday</span>
+<!-- Inline Sparkline SVG -->
+<svg class="w-24 h-6 text-primary overflow-visible" fill="none" viewbox="0 0 100 24">
+<path d="M0 20 L15 17 L30 19 L45 12 L60 14 L75 8 L90 10 L100 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<circle cx="100" cy="2" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-low p-lg rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Active Headless Workers</span>
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">Load 82%</span>
+</div>
+</div>
+<div class="my-md flex items-baseline gap-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-semibold">32</span>
+<span class="font-code-lg text-code-lg text-on-surface-variant">/ 40 Concurrency</span>
+</div>
+<div class="w-full">
+<div class="flex justify-between font-code-sm text-code-sm mb-xs text-on-surface-variant">
+<span>Pool Saturation</span>
+<span class="text-on-surface">8 slots open</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 80%"></div>
+</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-low p-lg rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Success &amp; Bot Bypass</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">security</span>
+</div>
+<div class="my-md flex items-baseline justify-between">
+<span class="font-headline-xl text-headline-xl text-secondary tracking-tight font-semibold">99.42%</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-highest px-xs py-2xs rounded">0.08% err</span>
+</div>
+<div class="flex items-center gap-xs text-on-surface-variant font-code-sm text-code-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span class="text-on-surface">Turnstile &amp; Datadome zero-fail</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-low p-lg rounded-xl flex flex-col justify-between shadow-md relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Residential Bandwidth</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">router</span>
+</div>
+<div class="my-md flex items-baseline gap-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-semibold">48.6</span>
+<span class="font-code-lg text-code-lg text-on-surface-variant">/ 250 GB Pool</span>
+</div>
+<div class="w-full">
+<div class="flex justify-between font-code-sm text-code-sm mb-xs text-on-surface-variant">
+<span>Cycle Reset: 9 days</span>
+<span class="text-tertiary font-medium">19.4% used</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full transition-all duration-500" style="width: 19.4%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Workspace Split: Table (65%) + Real-time Inspector (35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left: Active & Scheduled Pipelines Data Grid -->
+<div class="lg:col-span-8 flex flex-col gap-md">
+<!-- Filter Bar -->
+<div class="bg-surface-container-low p-md rounded-xl flex flex-wrap items-center justify-between gap-sm shadow-sm">
+<div class="flex items-center gap-xs flex-1 min-w-[240px]">
+<div class="bg-surface-container-lowest px-sm py-2xs rounded flex items-center gap-xs text-on-surface-variant w-full max-w-xs">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<input class="bg-transparent font-code-sm text-code-sm text-on-surface outline-none placeholder:text-outline-variant w-full" placeholder="Search pipeline ID or keyword..." type="text" value=""/>
+</div>
+</div>
+<!-- Filter Segmented Chips -->
+<div class="flex items-center gap-xs font-code-sm text-code-sm">
+<button class="bg-primary text-on-primary font-medium px-sm py-2xs rounded transition-colors shadow-sm" type="button">All (5)</button>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant px-sm py-2xs rounded transition-colors flex items-center gap-2xs" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Running (3)
+            </button>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant px-sm py-2xs rounded transition-colors flex items-center gap-2xs" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Queued (1)
+            </button>
+<button class="bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant px-sm py-2xs rounded transition-colors" type="button">Completed</button>
+</div>
+<!-- Category Tags -->
+<div class="hidden sm:flex items-center gap-2xs border-l border-outline-variant/30 pl-sm font-label-sm text-label-sm uppercase">
+<span class="text-outline-variant px-xs">TAG:</span>
+<span class="bg-surface-container-highest hover:text-primary cursor-pointer text-on-surface-variant px-xs py-2xs rounded">E-commerce</span>
+<span class="bg-surface-container-highest hover:text-primary cursor-pointer text-on-surface-variant px-xs py-2xs rounded">Finance</span>
+</div>
+</div>
+<!-- Jobs Grid Container -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-md">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-sm px-md">Pipeline Name &amp; Target</th>
+<th class="py-sm px-md">Status / State</th>
+<th class="py-sm px-md">Execution Metrics</th>
+<th class="py-sm px-md">Workers</th>
+<th class="py-sm px-md text-right">Quick Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-lowest font-code-sm text-code-sm">
+<!-- Row 1 (Selected/Active) -->
+<tr class="bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer" onclick="selectPipeline('job_ecom_prices_us')">
+<td class="py-md px-md">
+<div class="flex items-start gap-xs">
+<div class="p-xs bg-primary/10 rounded text-primary mt-2xs">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface flex items-center gap-xs">
+                          job_ecom_prices_us
+                          <span class="bg-primary/20 text-primary font-label-sm text-label-sm uppercase px-xs py-2xs rounded">Selected</span>
+</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[210px]">Amazon &amp; BestBuy GPU Crawler</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex flex-col gap-2xs">
+<span class="inline-flex items-center gap-xs bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase px-xs py-2xs rounded w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                        Running (64%)
+                      </span>
+<div class="w-28 bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 64%"></div>
+</div>
+<span class="text-on-surface-variant text-[10px]">14,200 / 22,000 items</span>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex flex-col gap-2xs">
+<span class="text-on-surface font-semibold text-secondary">14.2 items/s</span>
+<span class="text-on-surface-variant text-[10px]">Started 22m ago</span>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex items-center gap-xs">
+<span class="font-semibold text-on-surface">8</span>
+<span class="text-on-surface-variant">nodes</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-xs">
+<button class="p-xs bg-surface-container-highest hover:bg-surface-bright text-tertiary rounded transition-colors" title="Pause job" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="p-xs bg-surface-container-highest hover:bg-error-container text-error rounded transition-colors" title="Terminate job" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+</button>
+<button class="p-xs bg-primary/20 hover:bg-primary/30 text-primary rounded transition-colors" title="Stream Logs" type="button">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer" onclick="selectPipeline('job_news_sentiment_v2')">
+<td class="py-md px-md">
+<div class="flex items-start gap-xs">
+<div class="p-xs bg-surface-container-highest rounded text-on-surface-variant mt-2xs">
+<span class="material-symbols-outlined text-[16px]">newspaper</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">job_news_sentiment_v2</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[210px]">Bloomberg &amp; Reuters Feed Scraper</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex flex-col gap-2xs">
+<span class="inline-flex items-center gap-xs bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase px-xs py-2xs rounded w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                        Daemon Live
+                      </span>
+<span class="text-on-surface-variant text-[10px]">Health 100% (Continuous)</span>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex flex-col gap-2xs">
+<span class="text-on-surface">4.8 items/s</span>
+<span class="text-on-surface-variant text-[10px]">Uptime 14d 6h</span>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex items-center gap-xs">
+<span class="font-semibold text-on-surface">4</span>
+<span class="text-on-surface-variant">nodes</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-xs">
+<button class="p-xs bg-surface-container-highest hover:bg-surface-bright text-tertiary rounded transition-colors" title="Pause" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="p-xs bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant rounded transition-colors" title="Inspect" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer" onclick="selectPipeline('job_crypto_orderbooks')">
+<td class="py-md px-md">
+<div class="flex items-start gap-xs">
+<div class="p-xs bg-surface-container-highest rounded text-on-surface-variant mt-2xs">
+<span class="material-symbols-outlined text-[16px]">currency_bitcoin</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">job_crypto_orderbooks</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[210px]">Centralized Exchange Order Book Scraper</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex flex-col gap-2xs">
+<span class="inline-flex items-center gap-xs bg-surface-container-highest text-secondary font-label-sm text-label-sm uppercase px-xs py-2xs rounded w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                        High Throughput
+                      </span>
+<span class="text-on-surface-variant text-[10px]">L2 WebSocket Feed</span>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex flex-col gap-2xs">
+<span class="text-secondary font-semibold">42.1 items/s</span>
+<span class="text-on-surface-variant text-[10px]">Started 1h ago</span>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex items-center gap-xs">
+<span class="font-semibold text-on-surface">8</span>
+<span class="text-on-surface-variant">nodes</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-xs">
+<button class="p-xs bg-surface-container-highest hover:bg-surface-bright text-tertiary rounded transition-colors" title="Pause" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button class="p-xs bg-surface-container-highest hover:bg-surface-bright text-primary rounded transition-colors" title="Stream Logs" type="button">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer" onclick="selectPipeline('job_flight_fares_agg')">
+<td class="py-md px-md">
+<div class="flex items-start gap-xs">
+<div class="p-xs bg-surface-container-highest rounded text-tertiary mt-2xs">
+<span class="material-symbols-outlined text-[16px]">flight_takeoff</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">job_flight_fares_agg</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[210px]">Airline Price Matrix Crawler</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md">
+<span class="inline-flex items-center gap-xs bg-surface-container-highest text-tertiary font-label-sm text-label-sm uppercase px-xs py-2xs rounded">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+                      Queued (in 12m)
+                    </span>
+</td>
+<td class="py-md px-md">
+<div class="flex flex-col gap-2xs">
+<span class="text-on-surface-variant">Depth: 350 routes</span>
+<span class="text-on-surface-variant text-[10px]">Priority: High</span>
+</div>
+</td>
+<td class="py-md px-md">
+<div class="flex items-center gap-xs">
+<span class="font-semibold text-on-surface">12</span>
+<span class="text-on-surface-variant">reserved</span>
+</div>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-xs">
+<button class="p-xs bg-primary/20 hover:bg-primary/30 text-primary rounded transition-colors" title="Start Now" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+<button class="p-xs bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant rounded transition-colors" title="Remove" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer" onclick="selectPipeline('job_linkedin_org_intel')">
+<td class="py-md px-md">
+<div class="flex items-start gap-xs">
+<div class="p-xs bg-surface-container-highest rounded text-on-surface-variant mt-2xs">
+<span class="material-symbols-outlined text-[16px]">corporate_fare</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">job_linkedin_org_intel</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm truncate max-w-[210px]">B2B Tech Company Profiles</span>
+</div>
+</div>
+</td>
+<td class="py-md px-md">
+<span class="inline-flex items-center gap-xs bg-surface-container-highest text-outline font-label-sm text-label-sm uppercase px-xs py-2xs rounded">
+<span class="material-symbols-outlined text-[12px] text-secondary">check_circle</span>
+                      Completed
+                    </span>
+</td>
+<td class="py-md px-md">
+<div class="flex flex-col gap-2xs">
+<span class="text-on-surface">38,400 records</span>
+<span class="text-secondary text-[10px]">S3 Sink • 0 errors</span>
+</div>
+</td>
+<td class="py-md px-md">
+<span class="text-on-surface-variant text-[10px]">Duration: 1h 14m</span>
+</td>
+<td class="py-md px-md text-right">
+<div class="inline-flex items-center gap-xs">
+<button class="p-xs bg-surface-container-highest hover:bg-surface-bright text-on-surface rounded transition-colors" title="Export Data" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+</button>
+<button class="p-xs bg-surface-container-highest hover:bg-surface-bright text-on-surface-variant rounded transition-colors" title="Rerun" type="button">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Micro Status Bar -->
+<div class="bg-surface-container-lowest p-sm px-md flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm">
+<div class="flex items-center gap-md">
+<span>Showing 5 active pipelines</span>
+<span>•</span>
+<span class="text-secondary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Autopilot auto-scaling active
+              </span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="hover:text-on-surface cursor-pointer">Previous</span>
+<span class="bg-surface-container-high px-xs py-2xs rounded text-primary font-medium">1</span>
+<span class="hover:text-on-surface cursor-pointer">Next</span>
+</div>
+</div>
+</div>
+<!-- Live Stream Mini Terminal for selected job -->
+<div class="bg-surface-container-lowest rounded-xl p-md shadow-md flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm uppercase text-on-surface-variant pb-xs border-b border-surface-container-highest">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">terminal</span>
+<span class="text-on-surface">Tail Execution Log: job_ecom_prices_us (Worker #3)</span>
+</div>
+<span class="text-secondary font-code-sm text-code-sm">stdout 60fps</span>
+</div>
+<div class="font-code-sm text-code-sm space-y-2xs text-on-surface-variant pt-xs max-h-32 overflow-y-auto">
+<p class="text-on-surface-variant/70"><span class="text-outline">14:02:11.802</span> [worker-03] <span class="text-secondary">INFO</span> Fetch GET https://www.amazon.com/dp/B0CK... status=200 size=142kb lat=281ms</p>
+<p class="text-on-surface-variant/70"><span class="text-outline">14:02:12.115</span> [worker-03] <span class="text-secondary">INFO</span> Parsed schema node: "RTX 4090 OC 24GB" price="$1,749.99" in_stock=true</p>
+<p class="text-on-surface-variant/70"><span class="text-outline">14:02:12.440</span> [worker-07] <span class="text-tertiary">WARN</span> Cloudflare Turnstile token refreshed via CapSolver in 1.4s</p>
+<p class="text-on-surface-variant/70"><span class="text-outline">14:02:12.981</span> [worker-02] <span class="text-secondary">INFO</span> Batch 240/350 committed to PostgreSQL pool sink</p>
+</div>
+</div>
+</div>
+<!-- Right: Job Execution Side-Inspector (Selected Job Telemetry) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface-container-low rounded-xl p-lg shadow-md flex flex-col gap-lg relative">
+<!-- Header of Inspector -->
+<div class="flex items-start justify-between">
+<div>
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-primary flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                Node Telemetry
+              </div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold mt-2xs">job_ecom_prices_us</h2>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Cluster allocation: 8 Puppeteer Workers</span>
+</div>
+<span class="bg-surface-container-highest text-secondary font-code-sm text-code-sm px-xs py-2xs rounded">Health 99.8%</span>
+</div>
+<!-- Section 1: Live Worker CPU & Memory Real-Time Graph -->
+<div class="bg-surface-container-lowest p-md rounded-xl flex flex-col gap-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm uppercase text-on-surface-variant">
+<span>Cluster Resource Load</span>
+<span class="text-on-surface font-code-sm text-code-sm">CPU: 44% | MEM: 61%</span>
+</div>
+<!-- Real-time SVG Graph Representation -->
+<div class="w-full h-28 relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 300 90">
+<!-- Grid Lines -->
+<line stroke="rgba(66, 71, 84, 0.2)" stroke-dasharray="3 3" x1="0" x2="300" y1="20" y2="20"></line>
+<line stroke="rgba(66, 71, 84, 0.2)" stroke-dasharray="3 3" x1="0" x2="300" y1="50" y2="50"></line>
+<line stroke="rgba(66, 71, 84, 0.2)" stroke-dasharray="3 3" x1="0" x2="300" y1="80" y2="80"></line>
+<!-- CPU Line (Cyan/Primary) -->
+<path d="M0 65 Q 40 40, 80 50 T 160 30 T 230 45 T 300 25" fill="none" stroke="#adc6ff" stroke-width="2.5"></path>
+<!-- Memory Line (Secondary/Green) -->
+<path d="M0 75 Q 50 60, 100 68 T 200 48 T 270 42 T 300 38" fill="none" stroke="#4edea3" stroke-dasharray="2 2" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant pt-2xs border-t border-surface-container-high">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>CPU Cluster (vCPU 16)</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>RAM (9.8 GB / 16 GB)</span>
+</div>
+</div>
+</div>
+<!-- Section 2: HTTP Response Code Distribution -->
+<div class="flex flex-col gap-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm uppercase text-on-surface-variant">
+<span>HTTP Status Codes (Past 1h)</span>
+<span class="font-code-sm text-code-sm text-on-surface">54,192 requests</span>
+</div>
+<!-- Segmented Progress Bar -->
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full transition-all" style="width: 98%" title="200 OK: 98%"></div>
+<div class="bg-primary h-full transition-all" style="width: 1.8%" title="304 Not Modified: 1.8%"></div>
+<div class="bg-tertiary h-full transition-all" style="width: 0.2%" title="429 Rate Limited: 0.2%"></div>
+</div>
+<div class="grid grid-cols-3 gap-xs pt-xs font-code-sm text-code-sm">
+<div class="bg-surface-container-lowest p-xs rounded flex flex-col">
+<span class="text-secondary font-bold">98.0%</span>
+<span class="text-[10px] text-on-surface-variant">200 OK</span>
+</div>
+<div class="bg-surface-container-lowest p-xs rounded flex flex-col">
+<span class="text-primary font-bold">1.8%</span>
+<span class="text-[10px] text-on-surface-variant">304 Cache</span>
+</div>
+<div class="bg-surface-container-lowest p-xs rounded flex flex-col">
+<span class="text-tertiary font-bold">0.2%</span>
+<span class="text-[10px] text-on-surface-variant">429 Backoff</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Retry Queue & Auto-cooling Proxy Timers -->
+<div class="bg-surface-container-lowest p-md rounded-xl flex flex-col gap-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm uppercase text-on-surface-variant">
+<span>Auto-Cooling Proxy Pool</span>
+<span class="text-secondary font-code-sm text-code-sm flex items-center gap-2xs">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                Clean
+              </span>
+</div>
+<div class="space-y-xs font-code-sm text-code-sm">
+<div class="flex items-center justify-between p-xs bg-surface-container-high rounded">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary text-[16px]">hourglass_top</span>
+<span class="text-on-surface">ip_pool_dc_virginia_4</span>
+</div>
+<span class="text-tertiary font-bold">Cooling: 42s</span>
+</div>
+<div class="flex items-center justify-between p-xs bg-surface-container-high rounded">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="text-on-surface">ip_res_mobile_verizon_19</span>
+</div>
+<span class="text-secondary">Ready (Rotated)</span>
+</div>
+</div>
+<div class="pt-xs flex items-center justify-between text-on-surface-variant font-code-sm text-code-sm border-t border-surface-container-high">
+<span>Retry Buffer: <strong>3 tasks</strong></span>
+<button class="text-primary hover:underline flex items-center gap-2xs" type="button">
+<span>Flush Queue</span>
+<span class="material-symbols-outlined text-[14px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Quick Configuration Sliders / Actions -->
+<div class="pt-xs flex flex-col gap-xs font-label-sm text-label-sm">
+<div class="flex items-center justify-between text-on-surface-variant uppercase">
+<span>Dynamic Throttle Delay</span>
+<span class="text-on-surface font-code-sm text-code-sm">250ms ± 50ms</span>
+</div>
+<input class="accent-primary w-full h-1 bg-surface-container-highest rounded cursor-pointer" max="2000" min="50" type="range" value="250"/>
+<div class="flex justify-between text-[10px] text-outline-variant font-code-sm">
+<span>Aggressive (50ms)</span>
+<span>Polite (2000ms)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function selectPipeline(jobId) {
+    // Micro-interaction highlighting feedback
+    console.log("Inspecting pipeline telemetry:", jobId);
+  }
+</script>
+</main>
+<main id="view-schema-selectors" class="relative pt-14 w-full px-margin-desktop bg-background min-h-screen hidden">
+<div class="flex flex-col w-full pb-3xl space-y-lg">
+<!-- Top Context Header / Schema Meta Banner -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-md bg-surface-container-low p-md rounded-lg shadow-sm">
+<div class="flex items-center gap-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-xs">
+<span class="font-headline-md text-headline-md text-on-surface truncate">e-commerce-product-catalog.v3</span>
+<span class="bg-secondary/10 text-secondary text-label-sm font-label-sm px-xs py-2xs rounded-full flex items-center gap-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            ACTIVE PRODUCTION
+          </span>
+<span class="bg-surface-container-highest text-on-surface-variant text-label-sm font-label-sm px-xs py-2xs rounded">rev-884c</span>
+</div>
+<div class="flex items-center gap-md text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span>Target: <span class="font-code-sm text-code-sm text-primary">*.shopify.com / pdp-v2</span></span>
+<span>•</span>
+<span>12 Rules Defined</span>
+<span>•</span>
+<span>Success Rate: <span class="font-code-sm text-code-sm text-secondary">99.82%</span></span>
+<span>•</span>
+<span>Last modified: 14m ago by <span class="text-on-surface">alex.dev</span></span>
+</div>
+</div>
+</div>
+<!-- Quick Schema Actions -->
+<div class="flex items-center gap-xs flex-wrap">
+<button class="flex items-center gap-xs px-sm py-xs bg-surface-container-high text-on-surface hover:bg-surface-bright rounded text-label-md font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">difference</span>
+<span>Diff Revisions</span>
+</button>
+<button class="flex items-center gap-xs px-sm py-xs bg-surface-container-high text-on-surface hover:bg-surface-bright rounded text-label-md font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">upload_file</span>
+<span>Import OpenAPI/JSON</span>
+</button>
+<div class="relative group">
+<button class="flex items-center gap-xs px-sm py-xs bg-surface-container-highest text-primary-fixed hover:bg-surface-bright rounded text-label-md font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">ios_share</span>
+<span>Export Scrapy / Playwright</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+</div>
+<button class="flex items-center gap-xs px-md py-xs bg-primary-container text-on-primary-container hover:bg-primary rounded text-label-md font-label-md transition-colors shadow-sm font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Publish Pipeline</span>
+</button>
+</div>
+</div>
+<!-- Main Grid: 3-column Architecture (Directory, Builder/Pipeline, Sandbox & Code Export) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-lg items-start">
+<!-- LEFT PANEL: Schema Directory & Collections (Col 1-3) -->
+<div class="xl:col-span-3 flex flex-col space-y-md">
+<!-- Directory Card -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs text-label-sm font-label-sm uppercase tracking-wider text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+<span>Schema Directory</span>
+</div>
+<button class="p-2xs text-primary hover:bg-surface-container rounded transition-colors" title="Create New Schema" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</button>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-sm py-xs pl-xl rounded focus:outline-none placeholder-outline" placeholder="Filter schemas, tags..." type="text"/>
+<span class="material-symbols-outlined absolute left-2xs top-1/2 -translate-y-1/2 text-[16px] text-on-surface-variant">search</span>
+</div>
+<!-- Schema Listing Tree -->
+<div class="space-y-xs pt-xs">
+<!-- Active Item -->
+<div class="p-sm rounded bg-surface-container-high shadow-sm cursor-pointer transition-colors">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-primary font-semibold truncate">e-commerce-product-catalog.v3</span>
+<span class="w-2 h-2 rounded-full bg-secondary mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">12 fields • shopify</span>
+<span class="text-label-sm font-label-sm text-secondary">Prod</span>
+</div>
+</div>
+<!-- Inactive Item -->
+<div class="p-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-on-surface truncate">job-board-postings.v2</span>
+<span class="w-2 h-2 rounded-full bg-secondary mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">18 fields • lever/greenhouse</span>
+<span class="text-label-sm font-label-sm text-secondary">Prod</span>
+</div>
+</div>
+<!-- Inactive Item -->
+<div class="p-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-on-surface truncate">real-estate-mls-listings.v1</span>
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">34 fields • mls-idx</span>
+<span class="text-label-sm font-label-sm text-tertiary">Staging</span>
+</div>
+</div>
+<!-- Inactive Item -->
+<div class="p-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-on-surface truncate">sec-edgar-financial-filings.v4</span>
+<span class="w-2 h-2 rounded-full bg-secondary mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">29 fields • 10-K/10-Q</span>
+<span class="text-label-sm font-label-sm text-secondary">Prod</span>
+</div>
+</div>
+<!-- Inactive Item -->
+<div class="p-sm rounded bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-start justify-between">
+<span class="font-code-md text-code-md text-on-surface truncate">social-profile-metrics.v1</span>
+<span class="w-2 h-2 rounded-full bg-error mt-1"></span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mt-2xs">
+<span class="font-code-sm text-code-sm">9 fields • instagram/tiktok</span>
+<span class="text-label-sm font-label-sm text-error">Degraded</span>
+</div>
+</div>
+</div>
+<div class="pt-sm">
+<button class="w-full flex items-center justify-center gap-xs py-xs bg-surface-container-highest hover:bg-surface-bright text-on-surface text-label-md font-label-md rounded transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>New Schema Definition</span>
+</button>
+</div>
+</div>
+<!-- Quick Metrics / Rule Quality Bento Card -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Schema Health Radar</span>
+<div class="flex items-center justify-between pt-2xs">
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg text-secondary">99.8%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">DOM Selector Resilience</span>
+</div>
+<!-- Inline Sparkline / Mini Donut SVG -->
+<div class="w-12 h-12 relative flex items-center justify-center">
+<svg class="w-12 h-12 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="99.8, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="material-symbols-outlined text-[16px] text-secondary absolute">verified</span>
+</div>
+</div>
+<div class="space-y-xs font-code-sm text-code-sm pt-xs">
+<div class="flex justify-between text-on-surface-variant">
+<span>Primary CSS Matches:</span>
+<span class="text-on-surface">94.1%</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Fallback XPath Triggered:</span>
+<span class="text-tertiary">5.7%</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>LLM Heuristic Recovered:</span>
+<span class="text-primary">0.2%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER PANEL: Interactive Schema Builder & Rules (Col 4-8) -->
+<div class="xl:col-span-5 flex flex-col space-y-md">
+<!-- Editor Mode Tabs -->
+<div class="bg-surface-container-low rounded-lg p-xs flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-xs">
+<button class="flex items-center gap-xs px-md py-xs rounded bg-surface-container-high text-primary font-label-md text-label-md transition-colors" id="tab-visual" onclick="switchView('visual')" type="button">
+<span class="material-symbols-outlined text-[16px]">view_kanban</span>
+<span>Rule Builder</span>
+</button>
+<button class="flex items-center gap-xs px-md py-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md" id="tab-code" onclick="switchView('code')" type="button">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>YAML / JSON Spec</span>
+</button>
+</div>
+<div class="flex items-center gap-xs pr-xs">
+<button class="p-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Auto-format" type="button">
+<span class="material-symbols-outlined text-[16px]">magic_button</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded transition-colors" title="Validate Schema" type="button">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</button>
+</div>
+</div>
+<!-- VIEW 1: Visual Rule Builder Container -->
+<div class="space-y-sm" id="visual-builder-panel">
+<!-- Field 1: SKU -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">tag</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">sku</span>
+<span class="bg-primary/10 text-primary text-label-sm font-label-sm px-xs py-2xs rounded">string</span>
+<span class="bg-error/15 text-error text-label-sm font-label-sm px-xs py-2xs rounded">required</span>
+</div>
+<div class="flex items-center gap-2xs">
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" title="Test rule" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+<button class="p-2xs text-on-surface-variant hover:text-on-surface rounded" type="button"><span class="material-symbols-outlined text-[16px]">drag_handle</span></button>
+</div>
+</div>
+<!-- Selector inputs & Pipe chain -->
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">[data-product-id]</code>
+</div>
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">XPath Fallback</span>
+<code class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-xs py-2xs rounded flex-1 select-all">//div[contains(@class,'sku')]</code>
+</div>
+</div>
+<!-- Transform Pipe -->
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>trim()</span>
+<span class="material-symbols-outlined text-[12px] text-on-surface-variant">chevron_right</span>
+</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>regex_extract('^SKU-([0-9]+)')</span>
+</span>
+<button class="text-primary hover:text-primary-fixed text-label-sm font-label-sm flex items-center gap-2xs ml-xs" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> add pipe
+            </button>
+</div>
+</div>
+<!-- Field 2: current_price -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-tertiary">attach_money</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">current_price</span>
+<span class="bg-tertiary/10 text-tertiary text-label-sm font-label-sm px-xs py-2xs rounded">float</span>
+<span class="bg-error/15 text-error text-label-sm font-label-sm px-xs py-2xs rounded">required</span>
+</div>
+<div class="flex items-center gap-2xs">
+<span class="text-label-sm font-label-sm text-secondary bg-secondary/10 px-xs py-2xs rounded">Validations (2)</span>
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+</div>
+</div>
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">span.price-current, .pdp-price</code>
+</div>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>remove_currency_symbols()</span>
+<span class="material-symbols-outlined text-[12px] text-on-surface-variant">chevron_right</span>
+</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>to_float()</span>
+</span>
+</div>
+<!-- Validation Rules Box -->
+<div class="bg-surface-container-highest/60 rounded p-xs flex items-center gap-sm text-code-sm font-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">shield_with_heart</span>
+<span>Rules: <code class="text-tertiary">min: 0.01</code>, <code class="text-error">alert_if_null: true</code>, <code class="text-on-surface">max_drop_pct: 75%</code></span>
+</div>
+</div>
+<!-- Field 3: inventory_count -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">inventory_2</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">inventory_count</span>
+<span class="bg-secondary/10 text-secondary text-label-sm font-label-sm px-xs py-2xs rounded">integer</span>
+<span class="bg-surface-container text-on-surface-variant text-label-sm font-label-sm px-xs py-2xs rounded">nullable</span>
+</div>
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+</div>
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">span.stock-qty, [data-stock]</code>
+</div>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded flex items-center gap-2xs">
+<span>parse_int(fallback=0)</span>
+</span>
+</div>
+</div>
+<!-- Field 4: variant_colors (Array) -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed">palette</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">variant_colors</span>
+<span class="bg-primary/10 text-primary text-label-sm font-label-sm px-xs py-2xs rounded">array&lt;string&gt;</span>
+</div>
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+</div>
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">.swatch-list li::attr(data-color)</code>
+</div>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded">to_array()</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded">dedup()</span>
+</div>
+</div>
+<!-- Field 5: breadcrumbs -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">alt_route</span>
+<span class="font-code-md text-code-md font-semibold text-on-surface">breadcrumbs</span>
+<span class="bg-primary/10 text-primary text-label-sm font-label-sm px-xs py-2xs rounded">string</span>
+</div>
+<button class="p-2xs text-on-surface-variant hover:text-primary rounded" type="button"><span class="material-symbols-outlined text-[16px]">play_circle</span></button>
+</div>
+<div class="space-y-xs bg-surface-container-lowest p-sm rounded">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-16 uppercase">CSS Selector</span>
+<code class="font-code-sm text-code-sm text-secondary bg-surface-container px-xs py-2xs rounded flex-1 select-all">nav.breadcrumbs a::text</code>
+</div>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm flex-wrap pt-2xs">
+<span class="text-label-sm font-label-sm text-outline uppercase mr-xs">Pipe</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded">to_array()</span>
+<span class="bg-surface-container-highest text-on-surface px-xs py-2xs rounded">join(' &gt; ')</span>
+</div>
+</div>
+<!-- Add Field Trigger -->
+<button class="w-full py-sm bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md rounded flex items-center justify-center gap-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Append Target Schema Field</span>
+</button>
+</div>
+<!-- VIEW 2: YAML / Spec Viewer (Initially hidden via class toggle) -->
+<div class="hidden bg-surface-container-lowest rounded-lg p-md font-code-sm text-code-sm text-on-surface-variant space-y-2xs overflow-x-auto shadow-inner" id="code-spec-panel">
+<div class="text-outline-variant select-none font-code-sm"># ScrapeFlow Spec v2.4</div>
+<div><span class="text-primary">schema_id:</span> <span class="text-secondary">e-commerce-product-catalog.v3</span></div>
+<div><span class="text-primary">version:</span> <span class="text-tertiary">3.1.0</span></div>
+<div><span class="text-primary">engine:</span> <span class="text-on-surface">chromium-headless-stealth</span></div>
+<div><span class="text-primary">fields:</span></div>
+<div class="pl-md"><span class="text-primary">sku:</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">selector:</span> <span class="text-secondary">'[data-product-id]'</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">type:</span> <span class="text-tertiary">string</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">pipeline:</span> <span class="text-on-surface">[trim, "regex_extract('^SKU-([0-9]+)')"]</span></div>
+<div class="pl-md"><span class="text-primary">current_price:</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">selector:</span> <span class="text-secondary">'.price-current'</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">type:</span> <span class="text-tertiary">float</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">pipeline:</span> <span class="text-on-surface">[remove_currency_symbols, to_float]</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">validate:</span> <span class="text-on-surface">{ min: 0.01, alert_if_null: true }</span></div>
+<div class="pl-md"><span class="text-primary">variant_colors:</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">selector:</span> <span class="text-secondary">'.swatch-list li::attr(data-color)'</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">type:</span> <span class="text-tertiary">array&lt;string&gt;</span></div>
+<div class="pl-xl"><span class="text-on-surface-variant">pipeline:</span> <span class="text-on-surface">[to_array, dedup]</span></div>
+</div>
+</div>
+<!-- RIGHT PANEL: Selector Sandbox, Fallback Chains & Code Exporter (Col 9-12) -->
+<div class="xl:col-span-4 flex flex-col space-y-md">
+<!-- Live Selector Sandbox Tester -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">pest_control</span>
+<span>Selector Sandbox Tester</span>
+</div>
+<span class="bg-secondary/15 text-secondary text-label-sm font-label-sm px-xs py-2xs rounded font-semibold">14 MATCHES</span>
+</div>
+<div class="space-y-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Test Payload Source</span>
+<div class="flex items-center gap-xs text-primary font-code-sm">
+<span class="cursor-pointer hover:underline">Fetch live URL</span>
+<span>|</span>
+<span class="text-on-surface">Raw DOM</span>
+</div>
+</div>
+<input class="w-full bg-surface-container-lowest text-on-surface font-code-sm text-code-sm px-sm py-xs rounded focus:outline-none" type="text" value="https://store.acme-sample.io/products/alpha-runner-x9"/>
+</div>
+<!-- Sandbox Selector Quick Input -->
+<div class="space-y-2xs">
+<label class="text-label-sm font-label-sm text-on-surface-variant uppercase">Evaluate Query</label>
+<div class="flex items-center gap-xs bg-surface-container-lowest p-2xs rounded">
+<span class="material-symbols-outlined text-[16px] text-primary pl-xs">search</span>
+<input class="w-full bg-transparent text-secondary font-code-sm text-code-sm focus:outline-none" type="text" value=".swatch-list li::attr(data-color)"/>
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-sm py-2xs rounded" type="button">Test</button>
+</div>
+</div>
+<!-- Live Matches Visualizer / Payload Inspector -->
+<div class="space-y-xs pt-xs">
+<div class="text-label-sm font-label-sm uppercase text-on-surface-variant flex items-center justify-between">
+<span>Extracted Payload Preview</span>
+<span class="font-code-sm text-code-sm text-secondary">2.8ms exec</span>
+</div>
+<div class="bg-surface-container-lowest p-sm rounded space-y-xs font-code-sm text-code-sm max-h-48 overflow-y-auto">
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">1</span>
+<span class="text-primary">"variant_colors":</span>
+<span class="text-secondary">[ "Obsidian Black", "Cyber Cyan", "Solar Flare" ]</span>
+</div>
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">2</span>
+<span class="text-primary">"current_price":</span>
+<span class="text-tertiary">149.99</span>
+</div>
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">3</span>
+<span class="text-primary">"sku":</span>
+<span class="text-on-surface">"948201"</span>
+</div>
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">4</span>
+<span class="text-primary">"inventory_count":</span>
+<span class="text-tertiary">42</span>
+</div>
+<div class="text-on-surface-variant flex items-start gap-xs">
+<span class="text-outline select-none">5</span>
+<span class="text-primary">"breadcrumbs":</span>
+<span class="text-on-surface">"Footwear &gt; Performance &gt; Trail"</span>
+</div>
+</div>
+</div>
+<!-- Selector Fallback Resilience Cascade -->
+<div class="p-sm bg-surface-container rounded space-y-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant uppercase">Fallback Selector Chain</span>
+<span class="text-secondary flex items-center gap-2xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Auto-Heal Armed</span>
+</div>
+<div class="flex items-center gap-xs text-code-sm font-code-sm">
+<span class="bg-surface-container-high px-xs py-2xs rounded text-primary">CSS Path</span>
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_right_alt</span>
+<span class="bg-surface-container-high px-xs py-2xs rounded text-on-surface">XPath Exact</span>
+<span class="material-symbols-outlined text-[14px] text-outline">arrow_right_alt</span>
+<span class="bg-surface-container-high px-xs py-2xs rounded text-tertiary">LLM Vision Heuristic</span>
+</div>
+</div>
+</div>
+<!-- Code Export Dispatcher (Tabs: Scrapy, Playwright, cURL, Golang) -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm space-y-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">data_object</span>
+<span>Generated Extraction Snippet</span>
+</span>
+<button class="flex items-center gap-2xs text-primary hover:text-primary-fixed text-label-sm font-label-sm" id="copy-btn" onclick="copySnippet()" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+<!-- Export Tabs -->
+<div class="flex items-center gap-2xs bg-surface-container-lowest p-2xs rounded font-label-sm text-label-sm overflow-x-auto">
+<button class="px-xs py-2xs rounded bg-surface-container-high text-primary font-semibold" id="snip-scrapy" onclick="switchSnippet('scrapy')" type="button">Python Scrapy</button>
+<button class="px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface" id="snip-playwright" onclick="switchSnippet('playwright')" type="button">Playwright Node</button>
+<button class="px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface" id="snip-curl" onclick="switchSnippet('curl')" type="button">cURL Stream</button>
+<button class="px-xs py-2xs rounded text-on-surface-variant hover:text-on-surface" id="snip-go" onclick="switchSnippet('go')" type="button">Golang Colly</button>
+</div>
+<!-- Code block container -->
+<pre class="bg-surface-container-lowest p-sm rounded font-code-sm text-code-sm text-on-surface overflow-x-auto select-all leading-relaxed" id="code-snippet-box"><code><span class="text-tertiary">import</span> scrapy
+<span class="text-tertiary">import</span> re
+
+<span class="text-primary">class</span> <span class="text-secondary">EcomProductSpider</span>(scrapy.Spider):
+    name = <span class="text-secondary">"ecom_catalog"</span>
+    
+    <span class="text-primary">def</span> <span class="text-on-surface">parse</span>(self, response):
+        raw_sku = response.css(<span class="text-secondary">'[data-product-id]::attr(data-product-id)'</span>).get()
+        sku = re.search(<span class="text-secondary">r'^SKU-([0-9]+)'</span>, raw_sku.strip()).group(<span class="text-tertiary">1</span>)
+        
+        price_raw = response.css(<span class="text-secondary">'.price-current::text'</span>).get()
+        price = float(re.sub(<span class="text-secondary">r'[^\d.]'</span>, <span class="text-secondary">''</span>, price_raw))
+        
+        <span class="text-tertiary">yield</span> {
+            <span class="text-primary">'sku'</span>: sku,
+            <span class="text-primary">'current_price'</span>: price,
+            <span class="text-primary">'colors'</span>: response.css(<span class="text-secondary">'.swatch-list li::attr(data-color)'</span>).getall(),
+            <span class="text-primary">'breadcrumbs'</span>: <span class="text-secondary">' &gt; '</span>.join(response.css(<span class="text-secondary">'nav.breadcrumbs a::text'</span>).getall())
+        }</code></pre>
+</div>
+<!-- Execution Limits & Trigger Sandbox Pipeline -->
+<div class="bg-surface-container-low rounded-lg p-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Dry-Run in Isolated Worker</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Allocates 1 ephemeral Chromium node</span>
+</div>
+</div>
+<button class="px-md py-xs bg-secondary text-on-secondary font-label-md text-label-md rounded font-semibold hover:bg-secondary-fixed transition-colors shadow-sm" type="button">
+          Run Dry-Test
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchView(view) {
+    const visualPanel = document.getElementById('visual-builder-panel');
+    const codePanel = document.getElementById('code-spec-panel');
+    const tabVisual = document.getElementById('tab-visual');
+    const tabCode = document.getElementById('tab-code');
+
+    if (view === 'visual') {
+      visualPanel.classList.remove('hidden');
+      codePanel.classList.add('hidden');
+      tabVisual.classList.add('bg-surface-container-high', 'text-primary');
+      tabVisual.classList.remove('text-on-surface-variant');
+      tabCode.classList.remove('bg-surface-container-high', 'text-primary');
+      tabCode.classList.add('text-on-surface-variant');
+    } else {
+      visualPanel.classList.add('hidden');
+      codePanel.classList.remove('hidden');
+      tabCode.classList.add('bg-surface-container-high', 'text-primary');
+      tabCode.classList.remove('text-on-surface-variant');
+      tabVisual.classList.remove('bg-surface-container-high', 'text-primary');
+      tabVisual.classList.add('text-on-surface-variant');
+    }
+  }
+
+  const snippets = {
+    scrapy: `import scrapy\\nimport re\\n\\nclass EcomProductSpider(scrapy.Spider):\\n    name = "ecom_catalog"\\n    def parse(self, response):\\n        raw_sku = response.css('[data-product-id]::attr(data-product-id)').get()\\n        sku = re.search(r'^SKU-([0-9]+)', raw_sku.strip()).group(1)\\n        price_raw = response.css('.price-current::text').get()\\n        price = float(re.sub(r'[^\\\\d.]', '', price_raw))\\n        yield {'sku': sku, 'current_price': price}`,
+    playwright: `import { chromium } from 'playwright';\\n\\nconst browser = await chromium.launch();\\nconst page = await browser.newPage();\\nawait page.goto(targetUrl);\\nconst sku = await page.$eval('[data-product-id]', el => el.getAttribute('data-product-id').replace(/^SKU-/, ''));\\nconst price = await page.$eval('.price-current', el => parseFloat(el.innerText.replace(/[^0-9.]/g, '')));\\nconsole.log({ sku, price });`,
+    curl: `curl -X POST "https://api.scrapeflow.io/v2/extract" \\\\\\n  -H "Authorization: Bearer sf_live_938a4bc7" \\\\\\n  -H "Content-Type: application/json" \\\\\\n  -d '{"schema": "e-commerce-product-catalog.v3", "url": "https://store.acme-sample.io/pdp"}'`,
+    go: `package main\\n\\nimport (\\n    "github.com/gocolly/colly/v2"\\n    "fmt"\\n)\\n\\nfunc main() {\\n    c := colly.NewCollector()\\n    c.OnHTML("[data-product-id]", func(e *colly.HTMLElement) {\\n        fmt.Println("SKU:", e.Attr("data-product-id"))\\n    })\\n    c.Visit("https://store.acme-sample.io/pdp")\\n}`
+  };
+
+  function switchSnippet(type) {
+    ['scrapy', 'playwright', 'curl', 'go'].forEach(t => {
+      const btn = document.getElementById('snip-' + t);
+      if (t === type) {
+        btn.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold');
+        btn.classList.remove('text-on-surface-variant');
+      } else {
+        btn.classList.remove('bg-surface-container-high', 'text-primary', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      }
+    });
+
+    const box = document.getElementById('code-snippet-box');
+    box.innerText = snippets[type].replace(/\\n/g, '\n');
+  }
+
+  function copySnippet() {
+    const box = document.getElementById('code-snippet-box');
+    navigator.clipboard.writeText(box.innerText);
+    const btn = document.getElementById('copy-btn');
+    btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">check</span><span>Copied!</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[14px]">content_copy</span><span>Copy</span>`;
+    }, 2000);
+  }
+</script>
+</main>
+<main id="view-proxies-antibot" class="relative pt-14 w-full px-margin-desktop bg-background min-h-screen hidden">
+<div class="flex flex-col w-full space-y-xl pb-2xl">
+<!-- Top Command Bar / Metric Strip -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-md">
+<div class="flex flex-col gap-2xs">
+<div class="flex items-center gap-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Infrastructural Perimeter</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Cluster node: us-east-core-ingress</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Proxies &amp; Anti-Bot Steering</h1>
+</div>
+<!-- Quick Actions & Auth Export -->
+<div class="flex flex-wrap items-center gap-xs">
+<button class="flex items-center gap-xs bg-surface-container-high hover:bg-surface-bright text-on-surface px-md py-xs rounded font-label-md text-label-md shadow-sm transition-all active:scale-95" id="rotatePoolBtn" onclick="rotatePoolTrigger()" type="button">
+<span class="material-symbols-outlined text-secondary text-[16px] animate-spin" id="rotateIcon" style="animation-play-state: paused;">sync</span>
+<span>Rotate Entire Pool</span>
+<kbd class="bg-surface-container-lowest px-xs py-2xs rounded font-code-sm text-code-sm text-on-surface-variant ml-xs">⌘R</kbd>
+</button>
+<button class="flex items-center gap-xs bg-surface-container-high hover:bg-surface-bright text-on-surface px-md py-xs rounded font-label-md text-label-md shadow-sm transition-all" onclick="toggleAuthModal()" type="button">
+<span class="material-symbols-outlined text-primary text-[16px]">key</span>
+<span>Credentials &amp; cURL</span>
+</button>
+<div class="flex items-center gap-2xs bg-surface-container px-sm py-xs rounded">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">99.82% Passed</span>
+</div>
+</div>
+</div>
+<!-- Pool Health & Distribution Grid (Section 1) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-md">
+<!-- Card 1: Residential Rotating -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Residential Rotating</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">84,200</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">home</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Healthy Clean IPs</span>
+<span class="text-secondary font-medium">99.8% Uptime</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 99.8%"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">ASN diversity: 1,480 Tier-1 ISPs</span>
+</div>
+</div>
+<!-- Card 2: Mobile 4G/5G Gateways -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Mobile 4G/5G Nodes</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">12,500</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Carriers active</span>
+<span class="text-primary font-medium">AT&amp;T · VZW · Voda</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 88.4%"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Dynamic CGNAT rotation &lt; 400ms</span>
+</div>
+</div>
+<!-- Card 3: Datacenter Dedicated -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Datacenter Unmetered</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">1,200</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Bandwidth</span>
+<span class="text-tertiary font-medium">10 Gbps unmetered</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Zero-hop fast synthetic bypass</span>
+</div>
+</div>
+<!-- Card 4: Cooldown / Auto-Banned -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Auto-Banned / Cooldown</span>
+<span class="font-headline-lg text-headline-lg text-error font-semibold">142</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">hourglass_empty</span>
+</div>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-xs">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Re-quarantine window</span>
+<span class="text-error font-medium">~18m avg decay</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 14%"></div>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant">0.14% of global IP allocation</span>
+</div>
+</div>
+</div>
+<!-- Regional Latency Map & Global Mesh (Section 1 continued) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-md">
+<!-- Visual Geographic Latency Hub -->
+<div class="lg:col-span-2 bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">public</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Global Gateway Latency Topology</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container-highest px-xs py-2xs rounded">ICMP/TLS handshakes</span>
+</div>
+<!-- World Visual Grid / Node Map SVG Overlay -->
+<div class="relative w-full h-56 bg-surface-container-lowest rounded-lg overflow-hidden flex items-center justify-center p-md">
+<!-- Abstract Vector Grid Wireframe -->
+<svg class="w-full h-full opacity-35 text-outline-variant" fill="none" viewbox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="gridPattern" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-opacity="0.3" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#gridPattern)" height="320" width="800"></rect>
+<!-- Flight / Routing lines -->
+<path class="text-primary opacity-60" d="M 210 110 Q 360 40 430 115" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path class="text-primary opacity-60" d="M 430 115 Q 560 70 690 130" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path class="text-secondary opacity-60" d="M 210 110 Q 250 200 290 240" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1.5"></path>
+</svg>
+<!-- US-East Ping Pin -->
+<div class="absolute left-[26%] top-[34%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="flex items-center gap-xs bg-surface-container-high px-xs py-2xs rounded shadow-md group-hover:bg-surface-bright transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">US-East</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold">38ms</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-primary mt-1 shadow-lg shadow-primary/50 animate-pulse"></div>
+</div>
+<!-- EU-Frankfurt Ping Pin -->
+<div class="absolute left-[54%] top-[36%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="flex items-center gap-xs bg-surface-container-high px-xs py-2xs rounded shadow-md group-hover:bg-surface-bright transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">EU-Frankfurt</span>
+<span class="font-code-sm text-code-sm text-secondary font-bold">44ms</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-secondary mt-1 animate-pulse"></div>
+</div>
+<!-- AP-Tokyo Ping Pin -->
+<div class="absolute left-[86%] top-[40%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="flex items-center gap-xs bg-surface-container-high px-xs py-2xs rounded shadow-md group-hover:bg-surface-bright transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">AP-Tokyo</span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">112ms</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-tertiary mt-1"></div>
+</div>
+<!-- BR-SaoPaulo Ping Pin -->
+<div class="absolute left-[36%] top-[75%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer">
+<div class="flex items-center gap-xs bg-surface-container-high px-xs py-2xs rounded shadow-md group-hover:bg-surface-bright transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-code-sm text-code-sm text-on-surface font-semibold">BR-SaoPaulo</span>
+<span class="font-code-sm text-code-sm text-tertiary font-bold">148ms</span>
+</div>
+<div class="w-2 h-2 rounded-full bg-tertiary mt-1"></div>
+</div>
+</div>
+<!-- Quick Region Latency Breakdown footer -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-sm mt-md">
+<div class="bg-surface-container-highest/40 p-sm rounded flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">North America</span>
+<span class="font-code-md text-code-md text-secondary font-semibold">38ms · 99.9% clean</span>
+</div>
+<div class="bg-surface-container-highest/40 p-sm rounded flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Europe Central</span>
+<span class="font-code-md text-code-md text-secondary font-semibold">44ms · 99.7% clean</span>
+</div>
+<div class="bg-surface-container-highest/40 p-sm rounded flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Asia Pacific</span>
+<span class="font-code-md text-code-md text-tertiary font-semibold">112ms · 99.2% clean</span>
+</div>
+<div class="bg-surface-container-highest/40 p-sm rounded flex flex-col gap-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Latin America</span>
+<span class="font-code-md text-code-md text-tertiary font-semibold">148ms · 98.9% clean</span>
+</div>
+</div>
+</div>
+<!-- Proxy Provider Mix & Health Score -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-md">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Egress Health &amp; Mix</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase bg-secondary/15 px-xs py-2xs rounded">Optimized</span>
+</div>
+<!-- Mini visual radial / breakdown -->
+<div class="flex items-center gap-md my-auto">
+<div class="relative w-28 h-28 flex items-center justify-center shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="72, 100" stroke-width="3.5"></path>
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="22, 100" stroke-dashoffset="-72" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">99.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Pass</span>
+</div>
+</div>
+<div class="flex flex-col gap-xs flex-1">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="flex items-center gap-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-primary"></span>Oxylabs Resi</span>
+<span class="text-on-surface font-semibold">68%</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="flex items-center gap-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-secondary"></span>BrightData 4G</span>
+<span class="text-on-surface font-semibold">22%</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="flex items-center gap-xs text-on-surface-variant"><span class="w-2 h-2 rounded-full bg-tertiary"></span>AWS Direct DC</span>
+<span class="text-on-surface font-semibold">10%</span>
+</div>
+</div>
+</div>
+<div class="mt-md pt-sm bg-surface-container p-sm rounded flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Captcha Solver Balance</span>
+<span class="font-code-lg text-code-lg text-tertiary font-bold">$142.50 USD</span>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface px-sm py-xs rounded font-label-md text-label-md transition-colors" type="button">
+          Add Funds
+        </button>
+</div>
+</div>
+</div>
+<!-- Section 2: Anti-Bot Bypass Configuration Matrix -->
+<div class="flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">fingerprint</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Anti-Bot Bypass Configuration Matrix</h2>
+</div>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Auto-Adaptive Heuristics: Active</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-md">
+<!-- Rule 1: Cloudflare Turnstile & Challenge Solver -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Cloudflare Turnstile</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Intercepts Turnstile JS challenges and interstitial managed loops before headless canvas instantiation.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Auto-Solve Rate:</span>
+<span class="text-secondary font-semibold">99.4%</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Avg Solve Duration:</span>
+<span class="text-on-surface font-mono">1.2s</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Fallback Tier:</span>
+<span class="text-primary font-mono">Mobile IP Escalation</span>
+</div>
+</div>
+</div>
+<!-- Rule 2: Akamai & Datadome TLS Camouflage -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">shuffle</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">JA3/JA4 TLS Camouflage</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Injects randomized cipher suites, dynamic HTTP/2 PRIORITY frames, and pseudorandom SNI extensions for Akamai &amp; Datadome.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Active Fingerprint:</span>
+<span class="text-secondary font-semibold font-mono">Chrome 122 (OSX)</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">HTTP/2 SETTINGS Frame:</span>
+<span class="text-on-surface font-mono">Randomized (1-100)</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">GREASE Extension:</span>
+<span class="text-secondary font-mono">Synthesized (0x?a?a)</span>
+</div>
+</div>
+</div>
+<!-- Rule 3: Headless Browser Fingerprint Generator -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">visibility_off</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Canvas &amp; Audio Noise</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Injects imperceptible float shifts into WebGL render buffers and AudioContext oscillation to prevent persistent cross-session tracking.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">WebGL Vendor:</span>
+<span class="text-on-surface font-mono">Apple M2 GPU spoof</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Canvas Hash Jitter:</span>
+<span class="text-secondary font-mono">±0.00004px drift</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">navigator.webdriver:</span>
+<span class="text-secondary font-mono">undefined (patched)</span>
+</div>
+</div>
+</div>
+<!-- Rule 4: Automated Captcha Solvers (reCAPTCHA / hCaptcha) -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">smart_toy</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Captcha Automation</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            High-throughput API dispatcher for solving invisible reCAPTCHA v3 (target score 0.9+) and Enterprise hCaptcha puzzles.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Unit Cost:</span>
+<span class="text-on-surface font-mono">$0.001 / solve</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">v3 Human Score:</span>
+<span class="text-secondary font-mono">0.93 verified</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Timeout threshold:</span>
+<span class="text-on-surface font-mono">15,000ms max</span>
+</div>
+</div>
+</div>
+<!-- Rule 5: Exponential Backoff & Smart Jitter -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">timer</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Smart Retry &amp; Jitter</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Prevents IP block cascade via randomized intervals, exponential backoff, and instant switch from DC to Residential on 403.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Jitter Range:</span>
+<span class="text-on-surface font-mono">1.5s – 4.2s (Gaussian)</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Max Auto-Retries:</span>
+<span class="text-secondary font-mono">5 attempts</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">On 429 Ratelimit:</span>
+<span class="text-primary font-mono">Rotate IP + 8s pause</span>
+</div>
+</div>
+</div>
+<!-- Rule 6: Header & Cookie Integrity Vault -->
+<div class="bg-surface-container-low p-lg rounded-xl shadow-sm flex flex-col justify-between hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">cookie</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Cookie &amp; Session Vault</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-surface after:rounded-full after:h-3 after:w-3 after:transition-all"></div>
+</label>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Caches target session cookies and warm headers (`sec-ch-ua-platform`, `sec-fetch-dest`) across recurring spider threads.
+          </p>
+</div>
+<div class="mt-md pt-sm flex flex-col gap-2xs bg-surface-container-lowest/60 p-sm rounded">
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Warmed Sessions:</span>
+<span class="text-secondary font-semibold font-mono">3,490 active</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Cookie Pool Invalidation:</span>
+<span class="text-on-surface font-mono">On 401/403 auto-drop</span>
+</div>
+<div class="flex items-center justify-between font-code-sm text-code-sm">
+<span class="text-on-surface-variant">Header Order Camouflage:</span>
+<span class="text-secondary font-mono">Strict RFC compliant</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Live Traffic Inspector & IP Request Stream -->
+<div class="bg-surface-container-low rounded-xl shadow-sm p-lg flex flex-col space-y-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-sm">
+<div class="flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Live Egress Request Stream</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant ml-xs">Streaming 14.8 req/s</span>
+</div>
+<!-- Stream Filters & Controls -->
+<div class="flex items-center gap-xs">
+<div class="flex items-center gap-xs bg-surface-container px-sm py-2xs rounded">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">filter_list</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Filter: All Statuses</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface bg-surface-container-high hover:bg-surface-bright px-xs py-2xs rounded font-code-sm text-code-sm transition-colors" onclick="clearLiveFeed()" type="button">
+          Clear Buffer
+        </button>
+</div>
+</div>
+<!-- Telemetry Table -->
+<div class="overflow-x-auto rounded-lg">
+<table class="w-full text-left font-code-sm text-code-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-lowest text-on-surface-variant uppercase text-label-sm font-label-sm">
+<th class="py-sm px-md">Timestamp</th>
+<th class="py-sm px-md">Egress IP Masked</th>
+<th class="py-sm px-md">Type / Region</th>
+<th class="py-sm px-md">Protocol</th>
+<th class="py-sm px-md">Target Domain</th>
+<th class="py-sm px-md">Latency</th>
+<th class="py-sm px-md">Fingerprint</th>
+<th class="py-sm px-md text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface" id="streamTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:01.884</td>
+<td class="py-xs px-md font-mono text-primary font-medium">198.51.***.42</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary">home</span> US-East (Resi)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+<td class="py-xs px-md font-mono text-on-surface">api.marketplace-vendor.com</td>
+<td class="py-xs px-md text-secondary font-mono">42ms</td>
+<td class="py-xs px-md text-on-surface-variant">Chrome 122 / JA4-b3</td>
+<td class="py-xs px-md text-right">
+<span class="bg-secondary/15 text-secondary font-label-sm text-label-sm px-xs py-2xs rounded">200 OK</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:01.720</td>
+<td class="py-xs px-md font-mono text-primary font-medium">142.250.***.19</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-primary">signal_cellular_alt</span> EU-Frankfurt (4G)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+<td class="py-xs px-md font-mono text-on-surface">cdn.retail-catalog.eu/sku</td>
+<td class="py-xs px-md text-secondary font-mono">58ms</td>
+<td class="py-xs px-md text-on-surface-variant">Safari 17.2 / iOS</td>
+<td class="py-xs px-md text-right">
+<span class="bg-secondary/15 text-secondary font-label-sm text-label-sm px-xs py-2xs rounded">200 OK</span>
+</td>
+</tr>
+<!-- Row 3: Retried 403 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:01.512</td>
+<td class="py-xs px-md font-mono text-tertiary font-medium">104.28.***.93</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary">dns</span> AP-Tokyo (DC)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/1.1</td>
+<td class="py-xs px-md font-mono text-on-surface">secure.ecom-gateway.jp/p</td>
+<td class="py-xs px-md text-tertiary font-mono">118ms</td>
+<td class="py-xs px-md text-on-surface-variant">Automated Turnstile</td>
+<td class="py-xs px-md text-right">
+<span class="bg-tertiary/15 text-tertiary font-label-sm text-label-sm px-xs py-2xs rounded">403 Retried (Resi)</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:01.290</td>
+<td class="py-xs px-md font-mono text-primary font-medium">185.190.***.11</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-secondary">home</span> US-Central (Resi)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+<td class="py-xs px-md font-mono text-on-surface">cloud.target-pricing-engine.com</td>
+<td class="py-xs px-md text-secondary font-mono">31ms</td>
+<td class="py-xs px-md text-on-surface-variant">Firefox 123 / Win11</td>
+<td class="py-xs px-md text-right">
+<span class="bg-secondary/15 text-secondary font-label-sm text-label-sm px-xs py-2xs rounded">200 OK</span>
+</td>
+</tr>
+<!-- Row 5: 302 Found -->
+<tr class="hover:bg-surface-container transition-colors bg-surface-container-low">
+<td class="py-xs px-md text-on-surface-variant">14:32:00.990</td>
+<td class="py-xs px-md font-mono text-primary font-medium">177.18.***.67</td>
+<td class="py-xs px-md">
+<span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[12px] text-tertiary">home</span> BR-SaoPaulo (Resi)
+              </span>
+</td>
+<td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+<td class="py-xs px-md font-mono text-on-surface">auth.latam-goods.com.br/s</td>
+<td class="py-xs px-md text-primary font-mono">146ms</td>
+<td class="py-xs px-md text-on-surface-variant">Chrome 122 / Android</td>
+<td class="py-xs px-md text-right">
+<span class="bg-primary/15 text-primary font-label-sm text-label-sm px-xs py-2xs rounded">302 Redirect</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Modal Backdrop for Auth Credentials & cURL Export (Hidden by default) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-md" id="authCredentialsModal">
+<div class="bg-surface-container-low rounded-xl shadow-xl max-w-xl w-full p-lg flex flex-col gap-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">vpn_key</span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Proxy Authentication &amp; Snippets</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-xs rounded hover:bg-surface-container-high" onclick="toggleAuthModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Direct Residential Ingress Gateway</span>
+<div class="flex items-center justify-between bg-surface-container-lowest p-sm rounded font-code-sm text-code-sm text-on-surface">
+<span class="truncate">http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777</span>
+<button class="text-primary hover:text-primary-fixed ml-sm" onclick="copySnippet('http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777')" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- cURL / Python Segmented View -->
+<div class="flex flex-col gap-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">cURL Execution Example</span>
+<pre class="bg-surface-container-lowest p-md rounded font-code-sm text-code-sm text-primary overflow-x-auto"><code>curl -x http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777 \
+  -H "X-ScrapeFlow-AntiBot: cloudflare-turnstile=auto;ja4=rotate" \
+  https://target-endpoint.com/v1/inventory</code></pre>
+</div>
+<div class="flex items-center justify-between pt-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Rotating credentials refresh every 24 hours automatically.</span>
+<button class="bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md px-md py-xs rounded transition-colors" onclick="toggleAuthModal()" type="button">
+          Done
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleAuthModal() {
+    const modal = document.getElementById('authCredentialsModal');
+    if (modal.classList.contains('hidden')) {
+      modal.classList.remove('hidden');
+    } else {
+      modal.classList.add('hidden');
+    }
+  }
+
+  function rotatePoolTrigger() {
+    const icon = document.getElementById('rotateIcon');
+    const btn = document.getElementById('rotatePoolBtn');
+    icon.style.animationPlayState = 'running';
+    btn.classList.add('opacity-75');
+
+    setTimeout(() => {
+      icon.style.animationPlayState = 'paused';
+      btn.classList.remove('opacity-75');
+      // Visual feedback
+      const newRow = document.createElement('tr');
+      newRow.className = 'hover:bg-surface-container transition-colors bg-surface-container-highest/20';
+      newRow.innerHTML = `
+        <td class="py-xs px-md text-on-surface-variant">Just now</td>
+        <td class="py-xs px-md font-mono text-secondary font-medium">109.124.***.88</td>
+        <td class="py-xs px-md"><span class="inline-flex items-center gap-2xs bg-surface-container-high text-on-surface px-xs py-2xs rounded text-label-sm font-label-sm"><span class="material-symbols-outlined text-[12px] text-secondary">home</span> Global Fresh Pool</span></td>
+        <td class="py-xs px-md text-on-surface-variant">HTTP/2 TLS 1.3</td>
+        <td class="py-xs px-md font-mono text-secondary">Rotated 84,200 egress routes</td>
+        <td class="py-xs px-md text-secondary font-mono">18ms</td>
+        <td class="py-xs px-md text-on-surface-variant">Zero-leaked JA4</td>
+        <td class="py-xs px-md text-right"><span class="bg-secondary/15 text-secondary font-label-sm text-label-sm px-xs py-2xs rounded">POOL FLUSHED</span></td>
+      `;
+      const tbody = document.getElementById('streamTableBody');
+      tbody.insertBefore(newRow, tbody.firstChild);
+    }, 900);
+  }
+
+  function clearLiveFeed() {
+    const tbody = document.getElementById('streamTableBody');
+    tbody.innerHTML = `
+      <tr class="bg-surface-container-low">
+        <td colspan="8" class="py-md px-md text-center text-on-surface-variant font-code-sm text-code-sm">
+          Buffer cleared. Listening for next outbound egress worker thread...
+        </td>
+      </tr>
+    `;
+  }
+
+  function copySnippet(text) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+    }
+  }
+
+  // Keyboard shortcut listener for Cmd+R
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'r') {
+      e.preventDefault();
+      rotatePoolTrigger();
+    }
+  });
+</script>
+</main>
+</div>
+
+<div id="scrapeflow-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-sm px-md py-sm rounded-xl bg-surface-container-high border border-secondary/40 shadow-2xl backdrop-blur-md">
+    <span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+    <div class="flex flex-col">
+        <span id="toast-title" class="font-headline-md text-[13px] font-semibold text-on-surface">Extraction Complete</span>
+        <span id="toast-msg" class="font-code-sm text-code-sm text-secondary">48 records extracted in 38ms</span>
+    </div>
+</div>
+
+<script>
+function showToast(title, msg) {
+    const toast = document.getElementById('scrapeflow-toast');
+    const tTitle = document.getElementById('toast-title');
+    const tMsg = document.getElementById('toast-msg');
+    if (!toast) return;
+    tTitle.textContent = title;
+    tMsg.textContent = msg;
+    toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 2800);
+}
+
+function switchView(viewId) {
+    const views = {
+        'extraction-studio': document.getElementById('view-extraction-studio'),
+        'active-scrape-jobs-and-pipelines': document.getElementById('view-active-scrape-jobs'),
+        'data-schema-and-selector-rules': document.getElementById('view-schema-selectors'),
+        'proxies-and-anti-bot-steer': document.getElementById('view-proxies-antibot')
+    };
+    
+    Object.values(views).forEach(v => {
+        if (v) v.classList.add('hidden');
+    });
+    
+    const target = views[viewId] || views['extraction-studio'];
+    if (target) {
+        target.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+    
+    document.querySelectorAll('nav[data-active-classes] a[data-path]').forEach(link => {
+        const path = link.getAttribute('data-path');
+        if (path === viewId) {
+            link.classList.add('bg-surface-container-high', 'text-primary', 'font-semibold', 'border-l-2', 'border-primary');
+            link.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-low', 'hover:text-on-surface');
+            link.setAttribute('aria-current', 'page');
+        } else {
+            link.classList.remove('bg-surface-container-high', 'text-primary', 'font-semibold', 'border-l-2', 'border-primary');
+            link.classList.add('text-on-surface-variant', 'hover:bg-surface-container-low', 'hover:text-on-surface');
+            link.removeAttribute('aria-current');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('nav[data-active-classes] a[data-path]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const path = link.getAttribute('data-path');
+            if (['extraction-studio', 'active-scrape-jobs-and-pipelines', 'data-schema-and-selector-rules', 'proxies-and-anti-bot-steer'].includes(path)) {
+                e.preventDefault();
+                switchView(path);
+            }
+        });
+    });
+
+    const execBtn = document.getElementById('btn-execute-scrape');
+    if (execBtn) {
+        execBtn.addEventListener('click', () => {
+            const originalHTML = execBtn.innerHTML;
+            execBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Executing Cluster...</span>';
+            execBtn.disabled = true;
+            setTimeout(() => {
+                execBtn.innerHTML = originalHTML;
+                execBtn.disabled = false;
+                showToast('Extraction Executed', 'Scraped 48 items from endpoint in 38ms! Validation: 100% Passed');
+            }, 500);
+        });
+    }
+
+    const runTopBtn = document.querySelector('header button[type="button"]');
+    if (runTopBtn && runTopBtn.textContent.includes('Run Extraction')) {
+        runTopBtn.addEventListener('click', () => {
+            if (execBtn) execBtn.click();
+        });
+    }
+
+    // Output tabs switching
+    const tabButtons = document.querySelectorAll('button');
+    tabButtons.forEach(btn => {
+        if (['Response HTML', 'DOM Tree', 'Network', 'Parsed JSON'].some(t => btn.textContent.includes(t))) {
+            btn.addEventListener('click', () => {
+                showToast('Tab Switched', btn.textContent.trim() + ' view active');
+            });
+        }
+    });
+
+    window.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+            e.preventDefault();
+            if (execBtn) execBtn.click();
+        }
+    });
+});
+</script>
+</body></html>
