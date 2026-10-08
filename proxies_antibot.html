@@ -591,8 +591,8 @@
 <div class="flex flex-col gap-xs">
 <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Direct Residential Ingress Gateway</span>
 <div class="flex items-center justify-between bg-surface-container-lowest p-sm rounded font-code-sm text-code-sm text-on-surface">
-<span class="truncate">http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777</span>
-<button class="text-primary hover:text-primary-fixed ml-sm" onclick="copySnippet('http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777')" type="button">
+<span class="truncate">http://YOUR_USERNAME:YOUR_PASSWORD@gateway.scrapeflow.io:7777</span>
+<button class="text-primary hover:text-primary-fixed ml-sm" onclick="copySnippet('http://YOUR_USERNAME:YOUR_PASSWORD@gateway.scrapeflow.io:7777')" type="button">
 <span class="material-symbols-outlined text-[16px]">content_copy</span>
 </button>
 </div>
@@ -600,7 +600,7 @@
 <!-- cURL / Python Segmented View -->
 <div class="flex flex-col gap-xs">
 <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">cURL Execution Example</span>
-<pre class="bg-surface-container-lowest p-md rounded font-code-sm text-code-sm text-primary overflow-x-auto"><code>curl -x http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777 \
+<pre class="bg-surface-container-lowest p-md rounded font-code-sm text-code-sm text-primary overflow-x-auto"><code>curl -x http://YOUR_USERNAME:YOUR_PASSWORD@gateway.scrapeflow.io:7777 \
   -H "X-ScrapeFlow-AntiBot: cloudflare-turnstile=auto;ja4=rotate" \
   https://target-endpoint.com/v1/inventory</code></pre>
 </div>

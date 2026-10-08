@@ -1613,7 +1613,7 @@
   const snippets = {
     scrapy: `import scrapy\\nimport re\\n\\nclass EcomProductSpider(scrapy.Spider):\\n    name = "ecom_catalog"\\n    def parse(self, response):\\n        raw_sku = response.css('[data-product-id]::attr(data-product-id)').get()\\n        sku = re.search(r'^SKU-([0-9]+)', raw_sku.strip()).group(1)\\n        price_raw = response.css('.price-current::text').get()\\n        price = float(re.sub(r'[^\\\\d.]', '', price_raw))\\n        yield {'sku': sku, 'current_price': price}`,
     playwright: `import { chromium } from 'playwright';\\n\\nconst browser = await chromium.launch();\\nconst page = await browser.newPage();\\nawait page.goto(targetUrl);\\nconst sku = await page.$eval('[data-product-id]', el => el.getAttribute('data-product-id').replace(/^SKU-/, ''));\\nconst price = await page.$eval('.price-current', el => parseFloat(el.innerText.replace(/[^0-9.]/g, '')));\\nconsole.log({ sku, price });`,
-    curl: `curl -X POST "https://api.scrapeflow.io/v2/extract" \\\\\\n  -H "Authorization: Bearer sf_live_938a4bc7" \\\\\\n  -H "Content-Type: application/json" \\\\\\n  -d '{"schema": "e-commerce-product-catalog.v3", "url": "https://store.acme-sample.io/pdp"}'`,
+    curl: `curl -X POST "https://api.scrapeflow.io/v2/extract" \\\\\\n  -H "Authorization: Bearer YOUR_SCRAPEFLOW_API_KEY" \\\\\\n  -H "Content-Type: application/json" \\\\\\n  -d '{"schema": "e-commerce-product-catalog.v3", "url": "https://store.acme-sample.io/pdp"}'`,
     go: `package main\\n\\nimport (\\n    "github.com/gocolly/colly/v2"\\n    "fmt"\\n)\\n\\nfunc main() {\\n    c := colly.NewCollector()\\n    c.OnHTML("[data-product-id]", func(e *colly.HTMLElement) {\\n        fmt.Println("SKU:", e.Attr("data-product-id"))\\n    })\\n    c.Visit("https://store.acme-sample.io/pdp")\\n}`
   };
 
@@ -2235,8 +2235,8 @@
 <div class="flex flex-col gap-xs">
 <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Direct Residential Ingress Gateway</span>
 <div class="flex items-center justify-between bg-surface-container-lowest p-sm rounded font-code-sm text-code-sm text-on-surface">
-<span class="truncate">http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777</span>
-<button class="text-primary hover:text-primary-fixed ml-sm" onclick="copySnippet('http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777')" type="button">
+<span class="truncate">http://YOUR_USERNAME:YOUR_PASSWORD@gateway.scrapeflow.io:7777</span>
+<button class="text-primary hover:text-primary-fixed ml-sm" onclick="copySnippet('http://YOUR_USERNAME:YOUR_PASSWORD@gateway.scrapeflow.io:7777')" type="button">
 <span class="material-symbols-outlined text-[16px]">content_copy</span>
 </button>
 </div>
@@ -2244,7 +2244,7 @@
 <!-- cURL / Python Segmented View -->
 <div class="flex flex-col gap-xs">
 <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">cURL Execution Example</span>
-<pre class="bg-surface-container-lowest p-md rounded font-code-sm text-code-sm text-primary overflow-x-auto"><code>curl -x http://usr-live-prod-849:px_sec_9948ba@gateway.scrapeflow.io:7777 \
+<pre class="bg-surface-container-lowest p-md rounded font-code-sm text-code-sm text-primary overflow-x-auto"><code>curl -x http://YOUR_USERNAME:YOUR_PASSWORD@gateway.scrapeflow.io:7777 \
   -H "X-ScrapeFlow-AntiBot: cloudflare-turnstile=auto;ja4=rotate" \
   https://target-endpoint.com/v1/inventory</code></pre>
 </div>
